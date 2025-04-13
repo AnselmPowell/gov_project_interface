@@ -1,0 +1,17 @@
+tree /F > structure.txt
+
+\\ Main files 
+bash merge_files.sh .env next.config.js src/config.js app/layout.js app/page.js app/api/governance/analysis/route.js app/components/governance/GovernanceAnalysis.client.jsx app/contexts/AnalysisContext.client.jsx app/components/governance/dashboard/AnalysisDashboard.client.jsx app/components/governance/dashboard/DashboardContent.client.jsx app/components/governance/dashboard/PrincipleSummary.client.jsx app/components/governance/charts/PieChart.client.jsx app/components/governance/dashboard/ProcessingOverlay.client.jsx
+
+\\ Auth files 
+bash merge_files.sh 
+
+
+\\ Social Auth files 
+bash merge_files.sh 
+
+
+
+bash merge_files.sh 
+
+File not found

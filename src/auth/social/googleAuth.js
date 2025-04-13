@@ -30,3 +30,4 @@ export async function getGoogleUser(code) {
 
   return userinfo.data;
 }
+

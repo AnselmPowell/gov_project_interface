@@ -1,9 +1,22 @@
-/* Complete Global CSS Stylesheet */
 
+/* Complete Global CSS Stylesheet */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary: #2563eb;
+    --secondary: #4b5563;
+    --background: #f3f4f6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--background);
+}
 
 .hide-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
@@ -218,28 +231,15 @@
 /* Component Styles */
 @layer components {
   .btn {
-    display: inline-block;
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border-radius: var(--button-border-radius);
-    padding: var(--button-padding);
-    font-size: var(--button-font-size);
-    border: none;
-    cursor: pointer;
-    transition: background-color var(--transition-duration-fast) var(--transition-timing-function-default);
+      @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
   }
 
-  .btn:hover {
-    filter: brightness(120%);
+  .btn-primary {
+      @apply bg-blue-600 text-white hover:bg-blue-700;
   }
 
   .card {
-    background-color: var(--card-bg-color);
-    color: var(--card-text-color);
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
-    margin: var(--card-margin);
-    box-shadow: var(--shadow-md);
+      @apply bg-white rounded-lg shadow-sm;
   }
 
   .input,

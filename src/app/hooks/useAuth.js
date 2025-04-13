@@ -15,19 +15,20 @@ export function useAuth() {
 
   const checkAuth = async () => {
     try {
-      const res = await fetch('/api/auth/user', {
-        credentials: 'include'
-      });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.message === 'No user logged in') {
-          setUser(null);
-        } else {
-          setUser(data);
-        }
-      } else {
-        setUser(null);
-      }
+      const x = "text"
+      // const res = await fetch('/api/auth/user', {
+      //   credentials: 'include'
+      // });
+      // if (res.ok) {
+      //   const data = await res.json();
+      //   if (data.message === 'No user logged in') {
+      //     setUser(null);
+      //   } else {
+      //     setUser(data);
+      //   }
+      // } else {
+      //   setUser(null);
+      // }
     } catch (error) {
       console.error('Auth check failed', error);
       setUser(null);

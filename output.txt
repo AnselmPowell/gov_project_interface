@@ -1,0 +1,578 @@
+
+--- Start of .env ---
+# === Mode Flags ===
+IS_PRODUCTION_FRONTEND=true
+IS_PRODUCTION_BACKEND=true
+
+# === Frontend URLs ===
+FRONTEND_BASE_URL=https://docgraph.up.railway.app/api/
+FRONTEND_BASE_URL_DEV=http://localhost:3000/
+
+# === Backend URLs ===
+BACKEND_BASE_URL=https://docgraphapi.up.railway.app
+BACKEND_API_URL=https://docgraphapi.up.railway.app/api/
+BACKEND_BASE_URL_DEV=http://localhost:8001
+BACKEND_API_URL_DEV=http://localhost:8001/api/
+
+# === Google Auth ===
+GOOGLE_CLIENT_ID=1023093970842-latal9j95g6tgltj8rvtllepp4e8oe3g.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+GOOGLE_CALLBACK_URL=https://docgraph.up.railway.app/api/auth/google/callback
+GOOGLE_CALLBACK_URL_DEV=http://localhost:3000/api/auth/google/callback
+
+# === Microsoft Auth ===
+MICROSOFT_CLIENT_ID=be8e0c4d-ffc6-4ce7-a425-abdef5560c93
+MICROSOFT_CALLBACK_URL=https://docgraph.up.railway.app/api/auth/microsoft/callback
+MICROSOFT_CALLBACK_URL_DEV=http://localhost:3000/api/auth/microsoft/callback
+
+# === Database ===
+POSTGRES_URL=postgresql://base_database_owner:n0COgS2rVPID@ep-long-surf-a6riw4ss.us-west-2.aws.neon.tech/base_database?sslmode=require
+POSTGRES_URL_DEV=postgresql://base_database_owner:n0COgS2rVPID@ep-snowy-lake-a6krpk3u.us-west-2.aws.neon.tech/base_database?sslmode=require
+POSTGRES_USER=base_database_owner
+POSTGRES_HOST=ep-long-surf-a6riw4ss.us-west-2.aws.neon.tech
+POSTGRES_PASSWORD=n0COgS2rVPID
+POSTGRES_DATABASE=base_database
+
+# === Optional Secrets (if used elsewhere) ===
+JWT_SECRET=2c5a2923fbe784f95cd2de88c6f12ecbb96288fe27bb376ce2673f63345569ef
+SESSION_PASSWORD=bbee35d3c5a8a8c0c415981d04059ddb4ac9e99ed6e1a873b00c3fa1ac8e1f43
+CSRF_SECRET=asyh35d3c5a8a8c0c415981j7s63b2gatsg3b09ed6e1a873b00c393jne6c552g
+
+# === Pinata (optional, for IPFS/Gateway) ===
+PINATA_JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...<truncated>
+NEXT_PUBLIC_GATEWAY_URL=teal-ready-mouse-587.mypinata.cloud
+
+--- End of .env ---
+
+--- Start of next.config.js ---
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  async rewrites() {
+    const isProduction = process.env.IS_PRODUCTION_BACKEND === 'true';
+    const baseUrl = isProduction 
+      ? process.env.BACKEND_BASE_URL || 'https://basedatastorev2-production.up.railway.app/'
+      : process.env.BACKEND_BASE_URL_DEV || 'http://localhost:8001/';
+    return [
+      {
+        source: '/api/:path*',
+        destination: `${baseUrl}/api/:path*` || "https://basedatastorev2-production.up.railway.app'}/api/:path*",
+      },
+      {
+        source: '/login',
+        destination: '/pages/login',
+      },
+      {
+        source: '/register',
+        destination: '/pages/register',
+      }
+    ];
+  },
+  env: {
+    CSRF_SECRET: process.env.CSRF_SECRET,
+  },
+};
+
+module.exports = nextConfig;
+--- End of next.config.js ---
+
+--- Start of src/config.js ---
+const isProductionFrontend = process.env.IS_PRODUCTION_FRONTEND === 'true';
+const isProductionBackend = process.env.IS_PRODUCTION_BACKEND === 'true';
+  
+const config = {
+  isProductionFrontend,
+  isProductionBackend, 
+  backendBaseUrl: isProductionBackend 
+    ? process.env.BACKEND_BASE_URL
+    : process.env.BACKEND_BASE_URL_DEV,
+  backendApiUrl: isProductionBackend 
+    ? process.env.BACKEND_API_URL
+    : process.env.BACKEND_API_URL_DEV,
+  redirectUrl: isProductionFrontend 
+    ? process.env.FRONTEND_BASE_URL
+    : process.env.FRONTEND_BASE_URL_DEV,
+  databaseUrl: isProductionBackend
+    ? process.env.POSTGRES_URL
+    : process.env.POSTGRES_URL_DEV,
+  googleClientId: process.env.GOOGLE_CLIENT_ID,
+  googleSecretId: process.env.GOOGLE_CLIENT_SECRET,
+  googleRedirectUri: isProductionFrontend
+    ? process.env.GOOGLE_CALLBACK_URL
+    : process.env.GOOGLE_CALLBACK_URL_DEV,
+  microsoftClientId: process.env.MICROSOFT_CLIENT_ID,
+  microsoftRedirectUri: isProductionFrontend
+    ? process.env.MICROSOFT_CALLBACK_URL
+    : process.env.MICROSOFT_CALLBACK_URL_DEV,
+    
+};
+
+module.exports = config;
+--- End of src/config.js ---
+
+--- Start of app/layout.js ---
+// src/app/layout.js
+import { AuthProvider } from './contexts/AuthContext.client';
+import './styles/globals.css'
+
+export default function RootLayout({ children }) {
+    return (
+        <html lang="en">
+            <body>
+                <AuthProvider>
+                    {children}
+                </AuthProvider>
+            </body>
+        </html>
+    );
+}
+--- End of app/layout.js ---
+
+--- Start of app/page.js ---
+// src/app/page.js
+'use client';
+
+import Head from 'next/head'
+import { useAuth } from '@/app/hooks/useAuth';
+import {GovernanceAnalysis} from '@/app/components/governance/GovernanceAnalysis.client';
+
+export default function HomePage() {
+    const { user } = useAuth();
+ 
+    return (
+        <main className="min-h-screen bg-gray-100">
+            <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
+                <div className="text-center mb-8">
+                    <h1 className="text-3xl font-bold text-gray-900">
+                        Governance Report Analysis
+                    </h1>
+                </div>
+                
+                <GovernanceAnalysis />
+            </div>
+        </main>
+    );
+}
+--- End of app/page.js ---
+
+--- Start of app/api/governance/analysis/route.js ---
+// src/app/api/governance/analysis/route.js
+import { NextResponse } from 'next/server';
+import config from '@/config';
+ 
+const GOVERNANCE_API_URL = `${config.backendApiUrl}governance/analyze/analyze_documents/`;
+
+export async function POST(request) {
+    try {
+        console.log("[POST] Starting document analysis simulation");
+        const formData = await request.formData();
+        const files = formData.getAll('files');
+
+        console.log("Files received:", files.map(f => f.name));
+
+        if (!files || files.length === 0) {
+            return NextResponse.json(
+                { error: "No files provided" },
+                { status: 400 }
+            );
+        }
+
+        // For simulation, create fake file data
+        const filesData = files.map(file => ({
+            file_id: Math.random().toString(36).substring(7),
+            file_name: file.name,
+            file_url: "https://example.com/fake-url",
+            file_type: file.type
+        }));
+
+        console.log("Sending to backend:", filesData);
+
+        // Send to Django backend
+        const response = await fetch(GOVERNANCE_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ documents: filesData }),
+            credentials: 'include',
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to analyze documents');
+        }
+
+        const data = await response.json();
+        return NextResponse.json(data);
+
+    } catch (error) {
+        console.error('[POST] Analysis error:', error);
+        return NextResponse.json(
+            { error: 'Failed to analyze documents' },
+            { status: 500 }
+        );
+    }
+}
+--- End of app/api/governance/analysis/route.js ---
+
+--- Start of app/components/governance/GovernanceAnalysis.client.jsx ---
+
+ 
+// src/app/components/governance/GovernanceAnalysis.client.jsx
+'use client';
+ 
+import { useState } from 'react';
+import { AnalysisProvider } from '@/app/contexts/AnalysisContext.client';
+import  PartnerListSidebar  from './sidebar/PartnerListSidebar.client';
+import { AnalysisDashboard } from './dashboard/AnalysisDashboard.client';
+import { LoadingState } from '../ui/LoadingState.client';
+import { ANALYSIS_RESULTS } from '@/data/partners';
+
+export function GovernanceAnalysis() {
+  const [uploadedFiles, setUploadedFiles] = useState([]);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [selectedPartners, setSelectedPartners] = useState(new Set());
+
+  const handleAnalysis = async (files) => {
+    setIsProcessing(true);
+    
+    // Simulate processing
+    setTimeout(() => {
+      // Filter results for selected partners only
+      const results = Object.entries(ANALYSIS_RESULTS)
+        .filter(([partner]) => selectedPartners.has(partner))
+        .reduce((acc, [key, value]) => {
+          acc[key] = value;
+          return acc;
+        }, {});
+
+      setUploadedFiles(files);
+      setIsProcessing(false);
+    }, 30000); // 30 second simulation
+  };
+
+  return (
+    <AnalysisProvider>
+      <div className="flex h-screen bg-gray-100 overflow-hidden">
+        <PartnerListSidebar 
+          selectedPartners={selectedPartners}
+          onPartnerSelect={(partner, isSelected) => {
+            setSelectedPartners(prev => {
+              const next = new Set(prev);
+              if (isSelected) {
+                next.add(partner);
+              } else {
+                next.delete(partner);
+              }
+              return next;
+            });
+          }}
+        />
+        <div className="flex-1 overflow-auto">
+          {isProcessing ? (
+            <LoadingState message="Analyzing governance documents..." />
+          ) : (
+            <AnalysisDashboard
+              uploadedFiles={uploadedFiles}
+              onAnalyze={handleAnalysis}
+              results={ANALYSIS_RESULTS}
+              selectedPartners={selectedPartners}
+            />
+          )}
+        </div>
+      </div>
+    </AnalysisProvider>
+  );
+}
+--- End of app/components/governance/GovernanceAnalysis.client.jsx ---
+
+--- Start of app/contexts/AnalysisContext.client.jsx ---
+// src/app/contexts/AnalysisContext.client.jsx
+'use client';
+
+import { createContext, useContext, useState } from 'react';
+import { ANALYSIS_RESULTS } from '@/data/partners';
+ 
+// Define initial state
+const initialState = {
+  results: null,
+  isProcessing: false,
+  selectedPrinciple: null,
+  activeFilter: 'all',
+  selectedPartners: new Set(),
+  uploadedFiles: []
+};
+
+const AnalysisContext = createContext(null);
+
+export function AnalysisProvider({ children }) {
+  const [analysisState, setAnalysisState] = useState(initialState);
+
+  const updateAnalysis = (updates) => {
+    setAnalysisState(prev => ({
+      ...prev,
+      ...updates
+    }));
+  };
+
+  const processDocuments = async (files) => {
+    updateAnalysis({ isProcessing: true });
+    
+    // Simulate processing
+    setTimeout(() => {
+      // Filter results for selected partners
+      const results = Object.entries(ANALYSIS_RESULTS)
+        .filter(([partner]) => analysisState.selectedPartners.has(partner))
+        .reduce((acc, [key, value]) => {
+          acc[key] = value;
+          return acc;
+        }, {});
+
+      updateAnalysis({
+        results,
+        isProcessing: false,
+        uploadedFiles: files
+      });
+    }, 30000);
+  };
+
+  const value = {
+    ...analysisState,
+    updateAnalysis,
+    processDocuments
+  };
+
+  return (
+    <AnalysisContext.Provider value={value}>
+      {children}
+    </AnalysisContext.Provider>
+  );
+}
+
+export const useAnalysis = () => {
+  const context = useContext(AnalysisContext);
+  if (!context) {
+    throw new Error('useAnalysis must be used within AnalysisProvider');
+  }
+  return context;
+};
+--- End of app/contexts/AnalysisContext.client.jsx ---
+
+--- Start of app/components/governance/dashboard/AnalysisDashboard.client.jsx ---
+// src/app/components/governance/dashboard/AnalysisDashboard.client.jsx
+'use client';
+
+import { useState } from 'react';
+import { UploadSection } from './UploadSection.client';
+import { DashboardContent } from './DashboardContent.client';
+
+export function AnalysisDashboard() {
+    const [analysisResults, setAnalysisResults] = useState(null);
+    const [showUpload, setShowUpload] = useState(true);
+
+    const handleAnalysisComplete = (results) => {
+        setAnalysisResults(results);
+        setShowUpload(false);
+    };
+
+    return ( 
+        <div className="h-full">
+            {showUpload ? (
+                <UploadSection onComplete={handleAnalysisComplete} />
+            ) : (
+                <DashboardContent 
+                    results={analysisResults}
+                    onReset={() => setShowUpload(true)}
+                />
+            )}
+        </div>
+    );
+}
+--- End of app/components/governance/dashboard/AnalysisDashboard.client.jsx ---
+
+--- Start of app/components/governance/dashboard/DashboardContent.client.jsx ---
+// src/app/components/governance/dashboard/DashboardContent.client.jsx
+'use client';
+import { Filter, ArrowLeft } from 'lucide-react';
+
+import { useState } from 'react';
+import { PrincipleSummary } from './PrincipleSummary.client';
+
+export function DashboardContent({ results, onReset }) {
+    const [activeFilter, setActiveFilter] = useState('all');
+    const [selectedPrinciple, setSelectedPrinciple] = useState(null);
+
+   
+
+    return (
+        <></>
+    );
+}
+--- End of app/components/governance/dashboard/DashboardContent.client.jsx ---
+
+--- Start of app/components/governance/dashboard/PrincipleSummary.client.jsx ---
+// src/app/components/governance/dashboard/PrincipleSummary.client.jsx
+'use client';
+
+import { calculatePrincipleStats } from '../../../utils/analysis'; // Was missing
+import { PieChart } from '../charts/PieChart.client';
+
+
+export function PrincipleSummary({results, selectedPrinciple, onPrincipleSelect }) {
+    // Calculate principle statistics
+    const principleStats = calculatePrincipleStats(results);
+     
+    console.log("principle results", results)
+    console.log("principle Stats", principleStats)
+    return (
+        <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow-sm p-6">
+                <h3 className="text-lg font-medium text-gray-900 mb-4">
+                    Principle Distribution
+                </h3>
+                <PieChart data={principleStats} />
+            </div>
+
+            {/* Principle List */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+                <h3 className="text-lg font-medium text-gray-900 mb-4">
+                    Principles Overview
+                </h3>
+                <div className="space-y-4">
+                    {principleStats.map((stat) => (
+                        <button
+                            key={stat.principle}
+                            onClick={() => onPrincipleSelect(stat.principle)}
+                            className={`
+                                w-full p-4 rounded-lg border text-left
+                                ${selectedPrinciple === stat.principle 
+                                    ? 'border-blue-500 bg-blue-50' 
+                                    : 'border-gray-200 hover:border-blue-200'}
+                            `}
+                        >
+                            <div className="flex justify-between items-center">
+                                <span className="font-medium text-gray-900">
+                                    Principle {stat.principle}
+                                </span>
+                                <span className="text-sm text-gray-500">
+                                    {stat.percentage}%
+                                </span>
+                            </div>
+                            <p className="mt-1 text-sm text-gray-500">
+                                {stat.count} practices identified
+                            </p>
+                        </button>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+--- End of app/components/governance/dashboard/PrincipleSummary.client.jsx ---
+
+--- Start of app/components/governance/charts/PieChart.client.jsx ---
+// src/app/components/governance/dashboard/charts/PieChart.client.jsx
+'use client';
+
+const COLORS = [
+    '#E32434',  // Sport Wales Red
+    '#F6B207',  // Sport Wales Yellow
+    '#164B64',  // Sport Wales Blue
+    '#299D91',  // Sport Wales Green
+    '#E32434'   // Repeat red if 5th color needed
+  ];
+
+import { PieChart as RechartsChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+        return (
+            <div className="bg-white p-4 border rounded shadow">
+                <p>{`${payload[0].name}: ${payload[0].value}%`}</p>
+                <p className="text-sm text-gray-600">{`${payload[0].payload.count} matches`}</p>
+            </div>
+        );
+    }
+    return null;
+};
+
+export function PieChart({ data }) {
+    return (
+        <ResponsiveContainer width="100%" height={300}>
+            <RechartsChart >
+                <Pie
+                    data={data}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    dataKey="percentage"
+                    nameKey="principle"
+                >
+                    {data.map((entry, index) => (
+                        <Cell 
+                            key={`cell-${index}`} 
+                            fill={COLORS[index % COLORS.length]} 
+                        />
+                    ))}
+                </Pie>
+                <Tooltip content={<CustomTooltip />} />
+                <Legend />
+            </RechartsChart>
+        </ResponsiveContainer>
+    );
+}
+--- End of app/components/governance/charts/PieChart.client.jsx ---
+
+--- Start of app/components/governance/dashboard/ProcessingOverlay.client.jsx ---
+// src/app/components/governance/dashboard/ProcessingOverlay.client.jsx
+'use client';
+
+import { useEffect, useState } from 'react';
+import { Loader2 } from 'lucide-react';
+
+export function ProcessingOverlay() {
+    const [progress, setProgress] = useState(0);
+    const stages = [
+        'Reading documents...',
+        'Analyzing governance practices...',
+        'Identifying themes...',
+        'Generating insights...'
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setProgress(p => p < 100 ? p + 1 : p);
+        }, 300);
+        return () => clearInterval(interval);
+    }, []);
+
+    const currentStage = Math.floor((progress / 100) * stages.length);
+
+    return (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center">
+            <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+                <div className="flex flex-col items-center">
+                    <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
+                    <h3 className="mt-4 text-lg font-medium text-gray-900">
+                        Analyzing Documents
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-500">
+                        {stages[currentStage]}
+                    </p>
+                    <div className="w-full mt-4">
+                        <div className="h-2 bg-gray-200 rounded-full">
+                            <div 
+                                className="h-2 bg-blue-500 rounded-full transition-all duration-300"
+                                style={{ width: `${progress}%` }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+--- End of app/components/governance/dashboard/ProcessingOverlay.client.jsx ---
+

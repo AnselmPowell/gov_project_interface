@@ -3,7 +3,7 @@ const isProductionBackend = process.env.IS_PRODUCTION_BACKEND === 'true';
   
 const config = {
   isProductionFrontend,
-  isProductionBackend,
+  isProductionBackend, 
   backendBaseUrl: isProductionBackend 
     ? process.env.BACKEND_BASE_URL
     : process.env.BACKEND_BASE_URL_DEV,

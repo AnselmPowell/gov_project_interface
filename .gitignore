@@ -4,6 +4,9 @@
 .env.copy
 .env
 
+merge_files.sh
+merge_files_commands.txt
+output.txt
 
 # Dependencies
 /node_modules
