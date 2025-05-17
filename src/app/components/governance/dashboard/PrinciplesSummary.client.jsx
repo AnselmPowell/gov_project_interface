@@ -174,7 +174,7 @@ function MultiPartnerPrincipleDetails({
   
   return (
     <div className="space-y-6">
-      {/* Heat map visualization */}
+      {/* Heat map visualisation */}
       <div className="bg-white overflow-auto">
         <table className="min-w-full border-collapse">
           <thead>
@@ -289,7 +289,7 @@ function MultiPartnerPrincipleDetails({
 // Helper function to get principle names
 function getPrincipleName(principleId) {
   const principleNames = {
-    1: "Organizational/Legal Compliance",
+    1: "Organisational/Legal Compliance",
     2: "People and Cultures",
     3: "Insight, Engagement & Strategy",
     4: "Effectively Run Organisation",

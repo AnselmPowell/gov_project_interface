@@ -1,100 +1,132 @@
-
 /* Complete Global CSS Stylesheet */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Objektiv MK1';
+  src: url('/fonts/ObjektivMk1-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objektiv MK1';
+  src: url('/fonts/ObjektivMk1-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objektiv MK1';
+  src: url('/fonts/ObjektivMk1-XBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-    --primary: #2563eb;
-    --secondary: #4b5563;
-    --background: #f3f4f6;
-}
+  /* Primary Brand Colors */
+  --color-primary: #E32434; /* Sport Wales Red */
+  --color-secondary: #164B64; /* Sport Wales Blue */
+  --color-tertiary: #BFBEC5; /* Sport Wales Grey */
+  --color-accent: #F6B207; /* Sport Wales Yellow */
+  --color-background: #F4F5F7; /* Light Grey */
+  --color-text: #000000; /* Black */
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: var(--background);
-}
+  /* Primary Brand Colors with Names */
+  --color-sw-red: #E32434;
+  --color-sw-yellow: #F6B207;
+  --color-sw-blue: #164B64;
+  --color-sw-green: #299D91;
 
-.hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+  /* Primary Brand Colors Accent */
+  --color-sw-red-light: #F7BDC2;
+  --color-sw-yellow-light: #FFFFB7;
+  --color-sw-blue-light: #6CD0FF;
+  --color-sw-green-light: #97E9E1;
+  --color-sw-red-dark: #8E0A0A;
+  --color-sw-yellow-dark: #A77B00;
+  --color-sw-blue-dark: #001830;
+  --color-sw-green-dark: #005D53;
 
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari, Opera */
-}
-
-:root {
-  /* Color Palette */
-  --color-primary: hsl(231, 37%, 18%);
-  --color-secondary: hsl(233, 23%, 31%);
-  --color-tertiary: hsl(315, 11%, 60%);
-  --color-accent: hsl(11, 27%, 72%);
-  --color-background: hsl(24, 33%, 95%);
-  --color-text: hsl(0, 0%, 20%);
+  /* Neutral Colors */
+  --color-black: #000000;
+  --color-grey: #BFBEC5;
+  --color-light-grey: #F4F5F7;
+  --color-white: #FFFFFF;
 
   /* Status Colors */
-  --color-success: hsl(145, 63%, 42%);
-  --color-warning: hsl(45, 93%, 47%);
-  --color-error: hsl(354, 70%, 54%);
-  --color-info: hsl(201, 87%, 54%);
-  --color-pending: hsl(262, 47%, 55%);
+  --color-success: var(--color-sw-green);
+  --color-warning: var(--color-sw-yellow);
+  --color-error: var(--color-sw-red);
+  --color-info: var(--color-sw-blue);
+  --color-pending: #6A2E90; /* Purple */
 
-  /* Typography */
-  --font-family-header: 'Merriweather', serif;
-  --font-family-body: 'Source Sans Pro', sans-serif;
-  --font-size-base: 1rem;
-  /* 16px */
-  --line-height-base: 1.5;
-  /* 24px */
+  /* Typography - Font Families */
+  --font-family-header: 'Objektiv MK1', 'Montserrat', sans-serif;
+  --font-family-body: 'Objektiv MK1', 'Montserrat', sans-serif;
+  --font-primary: 'Objektiv MK1', 'Montserrat', Arial, sans-serif;
+  --font-fallback: 'Montserrat', sans-serif;
+  --font-system: 'Arial', sans-serif;
 
-  /* Font Sizes (in rem) */
-  --font-size-sm: 0.875rem;
-  /* 14px */
-  --font-size-md: 1rem;
-  /* 16px */
-  --font-size-lg: 1.125rem;
-  /* 18px */
-  --font-size-xl: 1.5rem;
-  /* 24px */
-  --font-size-2xl: 1.875rem;
-  /* 30px */
-  --font-size-3xl: 2.25rem;
-  /* 36px */
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-xbold: 800;
+
+  /* Font Sizes */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-2xl: 1.875rem; /* 30px */
+  --font-size-3xl: 2.25rem; /* 36px */
+  --font-size-body: 16px;
+  --font-size-label: 20px;
+  --font-size-head: 24px;
+  --font-size-subhead: 20px;
+  --font-size-hero: 95px;
 
   /* Line Heights */
-  --line-height-tight: 1.25;
-  --line-height-normal: 1.375;
-  --line-height-loose: 2;
+  --line-height-tight: 100%;
+  --line-height-normal: 110%;
+  --line-height-relaxed: 130%;
+  --line-height-loose: 140%;
 
   /* Spacing */
-  --spacing-unit: 0.25rem;
-  /* 4px */
-  --spacing-xs: calc(var(--spacing-unit) * 2);
-  /* 8px */
-  --spacing-sm: calc(var(--spacing-unit) * 4);
-  /* 16px */
-  --spacing-md: calc(var(--spacing-unit) * 6);
-  /* 24px */
-  --spacing-lg: calc(var(--spacing-unit) * 8);
-  /* 32px */
-  --spacing-xl: calc(var(--spacing-unit) * 12);
-  /* 48px */
-  --spacing-xxl: calc(var(--spacing-unit) * 16);
-  /* 64px */
+  --spacing-unit: 0.25rem; /* 4px */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 1rem; /* 16px */
+  --spacing-md: 1.5rem; /* 24px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 3rem; /* 48px */
+  --spacing-xxl: 4rem; /* 64px */
+  --margin-small: 5%;
+  --margin-large: 10%;
+  --gutter-width: calc(var(--margin-small) / 2);
 
   /* Border */
   --border-width-base: 1px;
   --border-width-thick: 2px;
-  --border-radius-sm: 0.25rem;
-  /* 4px */
-  --border-radius-md: 0.5rem;
-  /* 8px */
-  --border-radius-lg: 0.75rem;
-  /* 12px */
+  --border-radius-sm: 0.25rem; /* 4px */
+  --border-radius-md: 0.5rem; /* 8px */
+  --border-radius-lg: 0.75rem; /* 12px */
+  --border-radius-button: 8px;
+
+  /* Component Specific */
+  --button-height: 38px;
+  --button-padding: 0.8rem 1.8rem;
+
+  /* Layout */
+  --logo-min-width: 160px;
+  --clear-space-logo: 1em;
 
   /* Transition Durations and Easing Functions */
   --transition-duration-fast: 150ms;
@@ -103,6 +135,7 @@ body {
   --transition-timing-function-default: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-timing-function-in: cubic-bezier(0.4, 0, 1, 1);
   --transition-timing-function-out: cubic-bezier(0, 0, 0.2, 1);
+  --transition-default: 0.3s ease-in-out;
 
   /* Responsive Breakpoints */
   --breakpoint-sm: 640px;
@@ -111,53 +144,40 @@ body {
   --breakpoint-xl: 1280px;
 
   /* Focus Styles */
-  --focus-ring-color: hsla(231, 37%, 18%, 0.5);
+  --focus-ring-color: rgba(22, 75, 100, 0.5); /* Based on SW Blue */
   --focus-ring-width: 3px;
   --focus-ring-offset: 2px;
 
   /* Elevation System (Box Shadows) */
-  --shadow-md: 0 4px 6px -1px hsla(0, 0%, 0%, 0.1), 0 2px 4px -1px hsla(0, 0%, 0%, 0.06);
-  --shadow-lg: 0 10px 15px -3px hsla(0, 0%, 0%, 0.1), 0 4px 6px -2px hsla(0, 0%, 0%, 0.05);
-  --shadow-xl: 0 20px 25px -5px hsla(0, 0%, 0%, 0.1), 0 10px 10px -5px hsla(0, 0%, 0%, 0.04);
-
-
-  /* Button Base Styles */
-  --button-bg-color: var(--color-primary);
-  --button-text-color: var(--color-background);
-  --button-border-radius: var(--border-radius-sm);
-  --button-padding: var(--spacing-xs) var(--spacing-sm);
-  --button-font-size: var(--font-size-md);
-
-  /* Card Base Styles */
-  --card-bg-color: var(--color-background);
-  --card-text-color: var(--color-text);
-  --card-border-radius: var(--border-radius-lg);
-  --card-padding: var(--spacing-md);
-  --card-margin: var(--spacing-sm);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   /* Form Input Base Styles */
-  --input-bg-color: var(--color-background);
+  --input-bg-color: var(--color-white);
   --input-text-color: var(--color-text);
-  --input-border-color: var(--color-secondary);
+  --input-border-color: var(--color-grey);
   --input-border-width: var(--border-width-base);
-  --input-border-radius: var(--border-radius-sm);
+  --input-border-radius: var(--border-radius-button);
   --input-padding: var(--spacing-xs) var(--spacing-sm);
   --input-font-size: var(--font-size-md);
-  --input-focus-color: var(--color-primary);
+  --input-focus-color: var(--color-sw-blue);
   --checkbox-size: 1.25rem;
   --radio-size: 1.25rem;
+
+  /* Opacity */
+  --overlay-light: 75%;
+  --overlay-dark: 90%;
 }
 
-
-
- /* Dark theme overrides */
- :root[data-theme="dark"] {
-  --color-primary: hsl(12, 59%, 91%);
-  --color-secondary: hsl(233, 23%, 69%);
-  --color-tertiary: hsl(315, 11%, 40%);
-  --color-accent: hsl(233, 23%, 31%);
-  --color-background: hsl(231, 37%, 18%);
-  --color-text: hsl(0, 0%, 90%);
+/* Dark theme overrides */
+:root[data-theme="dark"] {
+  --color-primary: #F7BDC2; /* SW Red Light */
+  --color-secondary: #6CD0FF; /* SW Blue Light */
+  --color-tertiary: #BFBEC5; /* Grey - remains similar */
+  --color-accent: #FFFFB7; /* SW Yellow Light */
+  --color-background: #001830; /* SW Blue Dark */
+  --color-text: #F4F5F7; /* Light Grey */
 }
 
 * {
@@ -171,9 +191,17 @@ body {
 :root[data-theme="dark"] * {
   transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
               border-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
 
 /* Base Styles */
 @layer base {
@@ -182,40 +210,37 @@ body {
   }
 
   body {
-    font-family: var(--font-family-body);
+    font-family: var(--font-primary);
     font-size: var(--font-size-md);
     line-height: var(--line-height-normal);
     color: var(--color-text);
     background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-header);
+    font-weight: var(--font-weight-xbold);
+    line-height: var(--line-height-tight);
+    margin-top: 0;
   }
 
   h1 { 
     font-size: var(--font-size-3xl);
     /* 36px */
-    line-height: var(--line-height-tight);
-    /* 1.25 */
   }
   h2 { 
     font-size: var(--font-size-2xl);
     /* 30px */
-    line-height: var(--line-height-tight);
-    /* 1.25 */
   }
   h3 { 
     font-size: var(--font-size-xl);
     /* 24px */
-    line-height: var(--line-height-normal);
-    /* 1.375 */
   }
   h4 { 
     font-size: var(--font-size-lg);
-    /* 20px */
-    line-height: var(--line-height-normal);
-    /* 1.375 */
+    /* 18px */
   }
 
   a {
@@ -230,36 +255,51 @@ body {
 
 /* Component Styles */
 @layer components {
+  /* Button System */
   .btn {
-      @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+    height: var(--button-height);
+    padding: var(--button-padding);
+    border-radius: var(--border-radius-button);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-primary);
+    transition: var(--transition-default);
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
   }
 
   .btn-primary {
-      @apply bg-blue-600 text-white hover:bg-blue-700;
+    background-color: var(--color-sw-red);
+    color: var(--color-white);
+    @apply hover:opacity-90;
   }
 
+  .btn-secondary {
+    background-color: var(--color-sw-blue);
+    color: var(--color-white);
+    @apply hover:opacity-90;
+  }
+
+  /* Card System */
   .card {
-      @apply bg-white rounded-lg shadow-sm;
+    border-radius: var(--border-radius-button);
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    @apply bg-white rounded-lg shadow-sm;
   }
 
+  /* Form Components */
   .input,
   .textarea {
+    height: var(--button-height);
+    border-radius: var(--border-radius-button);
+    padding: 0 1rem;
+    border: 1px solid var(--color-grey);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
     display: block;
     width: 100%;
-    padding: var(--input-padding);
-    /* 0.5rem 1rem (8px 16px) */
-    font-size: var(--input-font-size);
-    /* 1rem (16px) */
     line-height: var(--line-height-normal);
-    /* 1.5 */
     color: var(--input-text-color);
-    /* hsl(0, 0%, 20%) */
     background-color: var(--input-bg-color);
-    /* hsl(24, 33%, 95%) */
-    border: var(--input-border-width) solid var(--input-border-color);
-    /* 1px solid hsl(233, 23%, 31%) */
-    border-radius: var(--input-border-radius);
-    /* 0.25rem (4px) */
     transition: border-color var(--transition-duration-fast) var(--transition-timing-function-default),
                 box-shadow var(--transition-duration-fast) var(--transition-timing-function-default);
   }
@@ -268,9 +308,7 @@ body {
   .textarea:focus {
     outline: none;
     border-color: var(--input-focus-color);
-    /* hsl(231, 37%, 18%) */
-    box-shadow: 0 0 0 2px hsla(231, 37%, 18%, 0.2);
-    /* 2px shadow with 20% opacity of hsl(231, 37%, 18%) */
+    box-shadow: 0 0 0 2px rgba(22, 75, 100, 0.2);
   }
 
   .checkbox,
@@ -279,19 +317,14 @@ body {
     display: inline-block;
     vertical-align: middle;
     width: var(--checkbox-size);
-    /* 1.25rem (20px) */
     height: var(--checkbox-size);
-    /* 1.25rem (20px) */
     background-color: var(--input-bg-color);
-    /* hsl(24, 33%, 95%) */
     border: var(--input-border-width) solid var(--input-border-color);
-    /* 1px solid hsl(233, 23%, 31%) */
     cursor: pointer;
   }
 
   .checkbox {
     border-radius: var(--border-radius-sm);
-    /* 0.25rem (4px) */
   }
 
   .radio {
@@ -301,9 +334,7 @@ body {
   .checkbox:checked,
   .radio:checked {
     background-color: var(--input-focus-color);
-    /* hsl(231, 37%, 18%) */
     border-color: var(--input-focus-color);
-    /* hsl(231, 37%, 18%) */
   }
 
   .checkbox:checked {
@@ -323,10 +354,109 @@ body {
   .checkbox:focus,
   .radio:focus {
     outline: none;
-    box-shadow: 0 0 0 2px hsla(231, 37%, 18%, 0.2);
-    /* 2px shadow with 20% opacity of hsl(231, 37%, 18%) */
+    box-shadow: 0 0 0 2px rgba(22, 75, 100, 0.2);
   }
 
+  /* Sport Wales Components */
+  .sw-button {
+    height: var(--button-height);
+    padding: var(--button-padding);
+    border-radius: var(--border-radius-button);
+    font-weight: var(--font-weight-bold);
+    transition: var(--transition-default);
+  }
+
+  .sw-button-primary {
+    @apply sw-bg-red text-white hover:opacity-90;
+  }
+
+  .sw-button-secondary {
+    @apply sw-bg-blue text-white hover:opacity-90;
+  }
+
+  .sw-input {
+    height: var(--button-height);
+    border-radius: var(--border-radius-button);
+    padding: 0 1rem;
+    border: 1px solid var(--color-grey);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+  }
+
+  .sw-label {
+    @apply text-lg font-semibold;
+    color: var(--color-sw-blue);
+    font-family: var(--font-primary);
+  }
+
+  .sw-checkbox {
+    @apply w-5 h-5 rounded border-2 focus:ring-2;
+    border-color: var(--color-sw-blue);
+    color: var(--color-sw-red);
+  }
+
+  .sw-container {
+    @apply max-w-5xl mx-auto;
+    padding: 0 var(--margin-small);
+  }
+
+  .sw-card {
+    border-radius: var(--border-radius-button);
+    background-color: var(--color-white);
+    padding: 1.5rem;
+  }
+
+  .sw-header {
+    @apply sw-bg-blue text-white p-6;
+  }
+
+  .sw-heading-primary {
+    @apply text-3xl font-extrabold leading-tight;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-xbold);
+  }
+
+  .sw-heading-secondary {
+    @apply text-xl font-bold mb-3;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .sw-notice {
+    @apply p-4 rounded-lg;
+    background-color: rgba(246, 178, 7, 0.1);
+    border-left: 4px solid var(--color-sw-yellow);
+  }
+
+  .sw-results {
+    @apply p-6 rounded-lg;
+    background-color: var(--color-sw-blue);
+    color: var(--color-white);
+  }
+
+  .sw-highlight {
+    @apply p-4 rounded-lg;
+    background-color: var(--color-sw-green);
+    color: var(--color-white);
+  }
+
+  .sw-sidebar-card {
+    @apply p-6 rounded-lg;
+    background-color: var(--color-light-grey);
+  }
+
+  .mode-toggle-button {
+    @apply sw-button flex-1 min-h-[56px] px-8 text-xs font-semibold tracking-wide;
+    transition: var(--transition-default);
+    
+    &.active {
+      @apply sw-button-primary shadow-lg scale-105;
+    }
+    
+    &.inactive {
+      @apply bg-white border-2 border-[--color-sw-red] text-[--color-sw-red] hover:sw-bg-red hover:text-white hover:scale-102;
+    }
+  }
 }
 
 /* Utility Classes */
@@ -370,28 +500,44 @@ body {
   }
 
   /* Colors */
-  .text-primary { color: var(--color-primary); /* hsl(231, 37%, 18%) */ }
-  .text-secondary { color: var(--color-secondary); /* hsl(233, 23%, 31%) */ }
-  .text-tertiary { color: var(--color-tertiary); /* hsl(315, 11%, 60%) */ }
-  .text-accent { color: var(--color-accent); /* hsl(11, 27%, 72%) */ }
-  .text-background { color: var(--color-background); /* hsl(24, 33%, 95%) */ }
+  .text-primary { color: var(--color-secondary); }
+  .text-secondary { color: var(--color-secondary); }
+  .text-tertiary { color: var(--color-tertiary); }
+  .text-accent { color: var(--color-accent); }
+  .text-background { color: var(--color-background); }
 
-  .bg-primary { background-color: var(--color-primary); /* hsl(231, 37%, 18%) */ }
-  .bg-secondary { background-color: var(--color-secondary); /* hsl(233, 23%, 31%) */ }
-  .bg-tertiary { background-color: var(--color-tertiary); /* hsl(315, 11%, 60%) */ }
-  .bg-accent { background-color: var(--color-accent); /* hsl(11, 27%, 72%) */ }
-  .bg-background { background-color: var(--color-background); /* hsl(24, 33%, 95%) */ }
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-secondary { background-color: var(--color-secondary); }
+  .bg-tertiary { background-color: var(--color-tertiary); }
+  .bg-accent { background-color: var(--color-accent); }
+  .bg-background { background-color: var(--color-background); }
 
-  .border-color { border-color: var(--component-border-color); border-width: var(--border-width-base); /* hsl(231, 37%, 18%) */ }
-  .border-secondary { background-color: var(--color-primary); /* hsl(233, 23%, 31%) */ }
+  .border-color { border-color: var(--component-border-color); border-width: var(--border-width-base); }
+  .border-secondary { background-color: var(--color-primary); }
 
+  .bg-success { background-color: var(--color-success); }
+  .bg-warning { background-color: var(--color-warning); }
+  .bg-error { background-color: var(--color-error); }
+  .bg-info { background-color: var(--color-info); }
+  .bg-pending { background-color: var(--color-pending); }
 
   /* Status Colors */
-  .text-success { color: var(--color-success); /* hsl(145, 63%, 42%) */ }
-  .text-warning { color: var(--color-warning); /* hsl(45, 93%, 47%) */ }
-  .text-error { color: var(--color-error); /* hsl(354, 70%, 54%) */ }
-  .text-info { color: var(--color-info); /* hsl(201, 87%, 54%) */ }
-  .text-pending { color: var(--color-pending); /* hsl(262, 47%, 55%) */ }
+  .text-success { color: var(--color-success); }
+  .text-warning { color: var(--color-warning); }
+  .text-error { color: var(--color-error); }
+  .text-info { color: var(--color-info); }
+  .text-pending { color: var(--color-pending); }
+
+  /* Sport Wales Brand Color Utilities */
+  .sw-text-red { color: var(--color-sw-red); }
+  .sw-bg-red { background-color: var(--color-sw-red); }
+  .sw-text-blue { color: var(--color-sw-blue); }
+  .sw-bg-blue { background-color: var(--color-sw-blue); }
+  .sw-text-yellow { color: var(--color-sw-yellow); }
+  .sw-bg-yellow { background-color: var(--color-sw-yellow); }
+  .sw-text-green { color: var(--color-sw-green); }
+  .sw-bg-green { background-color: var(--color-sw-green); }
+  .sw-text-grey { color: var(--color-tertiary); }
 
   /* Spacing */
   .m-1 { margin: var(--spacing-xs); /* 8px */ }
@@ -433,7 +579,6 @@ body {
   .ease-out {
     transition-timing-function: var(--transition-timing-function-out);
   }
-
 }
 
 /* Apply focus styles to interactive elements */
@@ -446,188 +591,183 @@ textarea:focus-visible {
   box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
 }
 
-
-/* React/NextJS Global Animation Styles  */
-
-
 /* Animation ################################################################# */
 
-
 :root {
-/* Refined easing functions for more creative, professional feel */
---ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
---ease-out-smooth: cubic-bezier(0.33, 1, 0.68, 1);
---ease-in-smooth: cubic-bezier(0.32, 0, 0.67, 0);
---ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Refined easing functions for more creative, professional feel */
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out-smooth: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-smooth: cubic-bezier(0.32, 0, 0.67, 0);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-/* Timing variables */
---transition-fast: 150ms;
---transition-medium-animate: 300ms;
---transition-slow-animate: 450ms;
+  /* Timing variables */
+  --transition-fast: 150ms;
+  --transition-medium-animate: 300ms;
+  --transition-slow-animate: 450ms;
 }
 
 /* Quick Wiggle Animation */
 @keyframes quickWiggle {
-0%, 100% { transform: rotate(0deg); }
-25% { transform: rotate(-2deg); }
-75% { transform: rotate(2deg); }
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
 }
 
 .animate-wiggle-once {
-animation: quickWiggle 0.3s var(--ease-in-out) 3;
-transform-origin: center;
+  animation: quickWiggle 0.3s var(--ease-in-out) 3;
+  transform-origin: center;
 }
 
 .animate-wiggle {
-animation: quickWiggle 0.4s var(--ease-in-out) infinite;
-transform-origin: center;
+  animation: quickWiggle 0.4s var(--ease-in-out) infinite;
+  transform-origin: center;
 }
 
 /* Refined Expand Animation */
 @keyframes smoothExpand {
-from { 
-  transform: scaleY(0);
-  opacity: 0;
-}
-to { 
-  transform: scaleY(1);
-  opacity: 1;
-}
+  from { 
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to { 
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
 .animate-expand {
-animation: smoothExpand var(--transition-medium-animate) var(--ease-out-smooth) forwards;
-transform-origin: top;
+  animation: smoothExpand var(--transition-medium-animate) var(--ease-out-smooth) forwards;
+  transform-origin: top;
 }
 
 /* Slide In Left Animation */
 @keyframes slideInLeft {
-from { 
-  transform: translateX(-100%);
-  opacity: 0;
-}
-to { 
-  transform: translateX(0);
-  opacity: 1;
-}
+  from { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .animate-slide-in-left {
-animation: slideInLeft var(--transition-medium-animate) var(--ease-out-smooth) forwards;
+  animation: slideInLeft var(--transition-medium-animate) var(--ease-out-smooth) forwards;
 }
 
 /* Slide In Right Animation */
 @keyframes slideInRight {
-from { 
-  transform: translateX(100%);
-  opacity: 0;
-}
-to { 
-  transform: translateX(0);
-  opacity: 1;
-}
+  from { 
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .animate-slide-in-right {
-animation: slideInRight var(--transition-medium-animate) var(--ease-out-smooth) forwards;
+  animation: slideInRight var(--transition-medium-animate) var(--ease-out-smooth) forwards;
 }
 
 /* New Professional Shake Animation */
 @keyframes professionalShake {
-0%, 100% { transform: translateX(0); }
-20% { transform: translateX(-2px) rotate(-1deg); }
-40% { transform: translateX(2px) rotate(1deg); }
-60% { transform: translateX(-2px) rotate(0deg); }
-80% { transform: translateX(2px) rotate(0deg); }
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px) rotate(-1deg); }
+  40% { transform: translateX(2px) rotate(1deg); }
+  60% { transform: translateX(-2px) rotate(0deg); }
+  80% { transform: translateX(2px) rotate(0deg); }
 }
 
 .animate-pro-shake {
-animation: professionalShake 0.5s var(--ease-in-out-smooth);
+  animation: professionalShake 0.5s var(--ease-in-out-smooth);
 }
 
 /* Refined Subtle Fade In */
 @keyframes refinedFadeIn {
-from { opacity: 0; transform: translateY(5px); }
-to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in {
-animation: refinedFadeIn var(--transition-medium-animate) var(--ease-out-smooth) forwards;
+  animation: refinedFadeIn var(--transition-medium-animate) var(--ease-out-smooth) forwards;
 }
 
 /* Elegant Spin with Fade */
 @keyframes elegantSpinFade {
-from { 
-  transform: rotate(0deg);
-  opacity: 0;
-}
-to { 
-  transform: rotate(360deg);
-  opacity: 1;
-}
+  from { 
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to { 
+    transform: rotate(360deg);
+    opacity: 1;
+  }
 }
 
 .animate-spin-fade {
-animation: elegantSpinFade 0.8s var(--ease-out-smooth) forwards;
+  animation: elegantSpinFade 0.8s var(--ease-out-smooth) forwards;
 }
 
 /* Smooth Pulse */
 @keyframes smoothPulse {
-0%, 100% { transform: scale(1); opacity: 1; }
-50% { transform: scale(1.05); opacity: 0.8; }
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
 }
 
 .animate-pulse {
-animation: smoothPulse 2s var(--ease-in-out-smooth) infinite;
+  animation: smoothPulse 2s var(--ease-in-out-smooth) infinite;
 }
 
 /* Focus Animation for Form Inputs */
 @keyframes focusHighlight {
-0% { box-shadow: 0 0 0 0 rgba(var(--color-navy), 0.2); }
-50% { box-shadow: 0 0 0 4px rgba(var(--color-navy), 0.3); }
-100% { box-shadow: 0 0 0 2px rgba(var(--color-navy), 0.2); }
+  0% { box-shadow: 0 0 0 0 rgba(22, 75, 100, 0.2); }
+  50% { box-shadow: 0 0 0 4px rgba(22, 75, 100, 0.3); }
+  100% { box-shadow: 0 0 0 2px rgba(22, 75, 100, 0.2); }
 }
 
 .focus-highlight:focus {
-animation: focusHighlight var(--transition-medium-animate) var(--ease-bounce) forwards;
+  animation: focusHighlight var(--transition-medium-animate) var(--ease-bounce) forwards;
 }
 
 /* Progress Bar Animation */
 @keyframes progressFill {
-from { width: 0; }
-to { width: var(--progress, 0%); }
+  from { width: 0; }
+  to { width: var(--progress, 0%); }
 }
 
 .animate-progress {
-animation: progressFill var(--transition-slow-animate) var(--ease-out-smooth) forwards;
-position: relative;
-overflow: hidden;
+  animation: progressFill var(--transition-slow-animate) var(--ease-out-smooth) forwards;
+  position: relative;
+  overflow: hidden;
 }
 
 .animate-progress::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-transform: translateX(-100%);
-animation: progressShine 1.5s infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  animation: progressShine 1.5s infinite;
 }
 
 @keyframes progressShine {
-100% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* Refined Skeleton Loading Animation */
 @keyframes refinedSkeletonLoading {
-0% { background-position: 200% 0; }
-100% { background-position: -200% 0; }
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 .skeleton-loading {
-background: linear-gradient(90deg, var(--color-off-white) 25%, var(--color-warm-gray) 37%, var(--color-off-white) 63%);
-background-size: 200% 100%;
-animation: refinedSkeletonLoading 1.5s var(--ease-in-out-smooth) infinite;
+  background: linear-gradient(90deg, var(--color-light-grey) 25%, var(--color-grey) 37%, var(--color-light-grey) 63%);
+  background-size: 200% 100%;
+  animation: refinedSkeletonLoading 1.5s var(--ease-in-out-smooth) infinite;
 }

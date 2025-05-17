@@ -6,7 +6,7 @@ const analysisResults = {
       "frameworkAlignment": [
         {
           "principleId": 1,
-          "principleName": "Organizational/Legal Compliance",
+          "principleName": "Organisational/Legal Compliance",
           "focusAreaCount": 2,
           "elements": ["Safeguarding", "Welsh Language"],
           "implementationStatus": "In Progress",
@@ -53,7 +53,7 @@ const analysisResults = {
       "principleDistribution": [
         {
           "principleId": 1,
-          "principleName": "Organizational/Legal Compliance",
+          "principleName": "Organisational/Legal Compliance",
           "partnerCount": 2,
           "percentage": 28.5,
           "elements": [
@@ -85,7 +85,7 @@ const analysisResults = {
             },
             {
               "elementId": "2.4",
-              "elementName": "Organizational Culture and Behaviours",
+              "elementName": "Organisational Culture and Behaviours",
               "partnerCount": 1,
               "partners": ["Partner A"]
             }
@@ -165,7 +165,7 @@ const analysisResults = {
           "supportArea": "Safeguarding level 3",
           "cfPrinciple": {
             "principleId": 1,
-            "principleName": "Organizational/Legal Compliance",
+            "principleName": "Organisational/Legal Compliance",
             "elementId": "1.2",
             "elementName": "Safeguarding"
           },
@@ -213,7 +213,7 @@ const analysisResults = {
           "activity": "Set up sub-group with Terms of Reference",
           "cfPrinciple": {
             "principleId": 1,
-            "principleName": "Organizational/Legal Compliance"
+            "principleName": "Organisational/Legal Compliance"
           },
           "startDate": "2025-05",
           "endDate": "2025-07",

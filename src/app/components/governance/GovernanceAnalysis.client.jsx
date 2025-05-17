@@ -7,6 +7,7 @@ import PartnerListSidebar from './sidebar/PartnerListSidebar.client';
 import UploadSection from './upload/UploadSection.client';
 import DashboardContent from './dashboard/DashboardContent.client';
 import ProcessingOverlay from './ProcessingOverlay.client';
+import Header from './Header.client';
 
 // Inner component that uses the context
 function GovernanceAnalysisInner() {
@@ -33,17 +34,22 @@ function GovernanceAnalysisInner() {
   }
   
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-background">
       {/* Partner selection sidebar */}
       <PartnerListSidebar />
       
-      {/* Main content area */}
-      <div className="flex-1 overflow-auto">
-        {mainContent}
+      {/* Main content area with header */}
+      <div className="flex-1 flex flex-col ">
+        <Header />
+        <div className="flex-1 overflow-auto px-6 py-4 bg-white z-[500] relative -top-0 -left-0 rounded-tl-lg">
+          {mainContent}
+          
+        </div>
       </div>
       
+      
       {/* Processing overlay - only shown during analysis */}
-      {isProcessing && <ProcessingOverlay />}
+      <ProcessingOverlay />
     </div>
   );
 }

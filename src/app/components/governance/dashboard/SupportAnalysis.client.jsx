@@ -29,7 +29,7 @@ export default function SupportAnalysis({ data, viewMode }) {
   
   return (
     <div className="space-y-8">
-      {/* Support request visualization based on view */}
+      {/* Support request visualisation based on view */}
       {viewMode === 'single' ? (
         <SinglePartnerSupportView 
           requests={filteredRequests} 
@@ -212,7 +212,7 @@ function MultiPartnerSupportView({
         )}
       </div>
       
-      {/* Support matrix visualization */}
+      {/* Support matrix visualisation */}
       {filteredMatrix && filteredMatrix.length > 0 ? (
         <div className="space-y-6">
           {filteredMatrix.map(element => (

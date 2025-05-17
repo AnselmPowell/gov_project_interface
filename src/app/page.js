@@ -10,19 +10,8 @@ export default function HomePage() {
     const { user } = useAuth();
  
     return (
-        <main className="min-h-screen bg-gray-100">
-      <div className="p-4">
-        <div className="text-center mb-2">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Sport Wales Governance Analysis System
-          </h1>
-          <p className="text-gray-600 mt-2">
-            Analyze and compare Governance Improvement Plans
-          </p>
-        </div>
-        
+        <main className="min-h-screen bg-background">
         <GovernanceAnalysis />
-      </div>
-    </main>
+        </main>
     );
 }

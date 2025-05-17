@@ -1,12 +1,13 @@
 // src/app/data/singlePartnerAnalysis.js
 
 const singlePartnerAnalysis = {
-    "partner-a": {
-      // Basic partner information
-      id: "partner-a",
-      name: "Partner A",
-      sportType: "Team Sport",
-      fundingLevel: "high",
+    // "partner-a": {
+      "angling-cymru": {
+        // id: "partner-a",
+        // name: "Partner A",
+    // Basic partner information
+      id: "angling-cymru",
+      name: "Angling Cymru",
       documentDate: "2025-01-15",
       
       // Framework alignment summary - shows mapping to Capability Framework principles
@@ -22,7 +23,7 @@ const singlePartnerAnalysis = {
         },
         {
           principleId: 1,
-          principleName: "Organizational/Legal Compliance",
+          principleName: "Organisational/Legal Compliance",
           focusAreaCount: 1,
           elements: ["1.1 Governing Document(s) and Review"],
           implementationStatus: "Not Started",
@@ -44,7 +45,7 @@ const singlePartnerAnalysis = {
       developmentAreas: [
         {
           areaId: "org-strategy-development",
-          areaTitle: "Organizational Strategy Development",
+          areaTitle: "Organisational Strategy Development",
           cfMapping: {
             principleId: 3,
             principleName: "Insight, Engagement & Strategy",
@@ -59,7 +60,7 @@ const singlePartnerAnalysis = {
             "Outline KPIs and success metrics",
             "Gather input from stakeholders (staff, clients, partners)",
             "Draft the strategy document and circulate for feedback",
-            "Finalize and approve by board",
+            "Finalise and approve by board",
             "Roll out the strategy with a communication plan"
           ],
           progressStatus: "In Progress",
@@ -74,7 +75,7 @@ const singlePartnerAnalysis = {
           areaTitle: "Review governing document",
           cfMapping: {
             principleId: 1,
-            principleName: "Organizational/Legal Compliance",
+            principleName: "Organisational/Legal Compliance",
             elementId: "1.1",
             elementName: "Governing Document(s) and Review"
           },
@@ -130,7 +131,7 @@ const singlePartnerAnalysis = {
           requestedTimeline: "2025-04",
           context: "Strategy consultant for initial stages",
           status: "Requested",
-          developmentArea: "Organizational Strategy Development",
+          developmentArea: "Organisational Strategy Development",
           gipExcerpt: "Strategy consultant for initial stages"
         },
         {
@@ -144,7 +145,7 @@ const singlePartnerAnalysis = {
           requestedTimeline: "2025-04",
           context: "Benchmarking reports from similar organisations",
           status: "Requested",
-          developmentArea: "Organizational Strategy Development",
+          developmentArea: "Organisational Strategy Development",
           gipExcerpt: "Benchmarking reports from similar organisations"
         },
         {
@@ -158,7 +159,7 @@ const singlePartnerAnalysis = {
           requestedTimeline: "2025-05",
           context: "Workshop facilitation services for brainstorming sessions",
           status: "Requested",
-          developmentArea: "Organizational Strategy Development",
+          developmentArea: "Organisational Strategy Development",
           gipExcerpt: "Workshop facilitation services for brainstorming sessions"
         },
         {
@@ -197,7 +198,7 @@ const singlePartnerAnalysis = {
         activities: [
           {
             activityId: "org-strategy-1",
-            areaTitle: "Organizational Strategy Development",
+            areaTitle: "Organisational Strategy Development",
             activity: "Formulate the Strategy Team",
             cfMapping: {
               principleId: 3,
@@ -220,7 +221,7 @@ const singlePartnerAnalysis = {
           },
           {
             activityId: "org-strategy-2",
-            areaTitle: "Organizational Strategy Development",
+            areaTitle: "Organisational Strategy Development",
             activity: "Conduct SWOT analysis",
             cfMapping: {
               principleId: 3,
@@ -243,7 +244,7 @@ const singlePartnerAnalysis = {
           },
           {
             activityId: "org-strategy-3",
-            areaTitle: "Organizational Strategy Development",
+            areaTitle: "Organisational Strategy Development",
             activity: "Define vision, mission, and strategic goals",
             cfMapping: {
               principleId: 3,
@@ -266,7 +267,7 @@ const singlePartnerAnalysis = {
           },
           {
             activityId: "org-strategy-4",
-            areaTitle: "Organizational Strategy Development",
+            areaTitle: "Organisational Strategy Development",
             activity: "Draft strategy document",
             cfMapping: {
               principleId: 3,
@@ -289,8 +290,8 @@ const singlePartnerAnalysis = {
           },
           {
             activityId: "org-strategy-5",
-            areaTitle: "Organizational Strategy Development",
-            activity: "Finalize and launch strategy",
+            areaTitle: "Organisational Strategy Development",
+            activity: "Finalise and launch strategy",
             cfMapping: {
               principleId: 3,
               principleName: "Insight, Engagement & Strategy"
@@ -316,7 +317,7 @@ const singlePartnerAnalysis = {
             activity: "Set up sub-group with Terms of Reference",
             cfMapping: {
               principleId: 1,
-              principleName: "Organizational/Legal Compliance"
+              principleName: "Organisational/Legal Compliance"
             },
             startDate: "2025-02",
             endDate: "2025-03",
@@ -339,7 +340,7 @@ const singlePartnerAnalysis = {
             activity: "Review and propose changes",
             cfMapping: {
               principleId: 1,
-              principleName: "Organizational/Legal Compliance"
+              principleName: "Organisational/Legal Compliance"
             },
             startDate: "2025-03",
             endDate: "2025-04",
@@ -359,10 +360,10 @@ const singlePartnerAnalysis = {
           {
             activityId: "gov-doc-3",
             areaTitle: "Review governing document",
-            activity: "Circulate and finalize document",
+            activity: "Circulate and finalise document",
             cfMapping: {
               principleId: 1,
-              principleName: "Organizational/Legal Compliance"
+              principleName: "Organisational/Legal Compliance"
             },
             startDate: "2025-04",
             endDate: "2025-05",
@@ -428,7 +429,7 @@ const singlePartnerAnalysis = {
           {
             activityId: "hr-manual-3",
             areaTitle: "Review HR Manual",
-            activity: "Finalize manual and train staff",
+            activity: "Finalise manual and train staff",
             cfMapping: {
               principleId: 4,
               principleName: "Effectively Run Organisation"
@@ -454,7 +455,7 @@ const singlePartnerAnalysis = {
       // Raw text excerpts from GIP
       gipExcerpts: [
         {
-          areaTitle: "Organizational Strategy Development",
+          areaTitle: "Organisational Strategy Development",
           text: "Formulate the Strategy Team (include board members, executives, and department heads)",
           cfMapping: {
             principleId: 3,
@@ -464,7 +465,7 @@ const singlePartnerAnalysis = {
           confidence: 0.95
         },
         {
-          areaTitle: "Organizational Strategy Development",
+          areaTitle: "Organisational Strategy Development",
           text: "Conduct a SWOT analysis to identify strengths, weaknesses, opportunities, and threats",
           cfMapping: {
             principleId: 3,
@@ -474,7 +475,7 @@ const singlePartnerAnalysis = {
           confidence: 0.95
         },
         {
-          areaTitle: "Organizational Strategy Development",
+          areaTitle: "Organisational Strategy Development",
           text: "Strategy consultant for initial stages",
           cfMapping: {
             principleId: 3,
@@ -516,12 +517,10 @@ const singlePartnerAnalysis = {
       ]
     },
   
-    "partner-b": {
-      id: "partner-b",
-      name: "Partner B",
-      sportType: "Individual Sport",
-      fundingLevel: "medium",
-      documentDate: "2025-01-20",
+    "badminton-wales": {
+      id: "badminton-wales",
+      name: "Badminton Wales'",
+      documentDate: "2025-01-25",
       
       frameworkAlignment: [
         {
@@ -553,7 +552,7 @@ const singlePartnerAnalysis = {
         },
         {
           principleId: 1,
-          principleName: "Organizational/Legal Compliance",
+          principleName: "Organisational/Legal Compliance",
           focusAreaCount: 1,
           elements: ["1.2 Safeguarding Children and Adults"],
           implementationStatus: "Not Started",
@@ -641,7 +640,7 @@ const singlePartnerAnalysis = {
           areaTitle: "Achieve Level 2 Safeguarding",
           cfMapping: {
             principleId: 1,
-            principleName: "Organizational/Legal Compliance",
+            principleName: "Organisational/Legal Compliance",
             elementId: "1.2",
             elementName: "Safeguarding Children and Adults"
           },
@@ -903,7 +902,7 @@ const singlePartnerAnalysis = {
          activity: "Engage with CPSU and create action plan",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-01",
          endDate: "2025-02",
@@ -926,7 +925,7 @@ const singlePartnerAnalysis = {
          activity: "Implement action plan and prepare for assessment",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-02",
          endDate: "2025-03",
@@ -1010,11 +1009,9 @@ const singlePartnerAnalysis = {
    ]
  },
 
- "partner-c": {
-   id: "partner-c",
-   name: "Partner C",
-   sportType: "Team Sport",
-   fundingLevel: "medium",
+ "basketball-wales": {
+   id: "basketball-wales",
+   name: "Basketball Wales",
    documentDate: "2025-01-25",
    
    frameworkAlignment: [
@@ -1029,7 +1026,7 @@ const singlePartnerAnalysis = {
      },
      {
        principleId: 1,
-       principleName: "Organizational/Legal Compliance",
+       principleName: "Organisational/Legal Compliance",
        focusAreaCount: 1,
        elements: ["1.2 Safeguarding Children and Adults"],
        implementationStatus: "In Progress",
@@ -1038,7 +1035,7 @@ const singlePartnerAnalysis = {
      },
      {
        principleId: 1,
-       principleName: "Organizational/Legal Compliance",
+       principleName: "Organisational/Legal Compliance",
        focusAreaCount: 1,
        elements: ["1.1 to 1.9 Multiple Elements"],
        implementationStatus: "In Progress",
@@ -1074,7 +1071,7 @@ const singlePartnerAnalysis = {
        areaTitle: "Capability Framework requirements",
        cfMapping: {
          principleId: 1,
-         principleName: "Organizational/Legal Compliance"
+         principleName: "Organisational/Legal Compliance"
        },
        secondaryCfMapping: {
          principleId: 3,
@@ -1100,7 +1097,7 @@ const singlePartnerAnalysis = {
        areaTitle: "Safeguarding",
        cfMapping: {
          principleId: 1,
-         principleName: "Organizational/Legal Compliance",
+         principleName: "Organisational/Legal Compliance",
          elementId: "1.2",
          elementName: "Safeguarding Children and Adults"
        },
@@ -1219,7 +1216,7 @@ const singlePartnerAnalysis = {
          activity: "Familiarize with framework and assess against requirements",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-01",
          endDate: "2025-04",
@@ -1242,7 +1239,7 @@ const singlePartnerAnalysis = {
          activity: "Create implementation plan and seek support",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-05",
          endDate: "2025-09",
@@ -1265,7 +1262,7 @@ const singlePartnerAnalysis = {
          activity: "Implementation of core elements",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-10",
          endDate: "2026-03",
@@ -1288,7 +1285,7 @@ const singlePartnerAnalysis = {
          activity: "CPSU engagement and requirement identification",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-02",
          endDate: "2025-04",
@@ -1311,7 +1308,7 @@ const singlePartnerAnalysis = {
          activity: "Implementation of CPSU requirements",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-04",
          endDate: "2025-07",
@@ -1399,11 +1396,9 @@ const singlePartnerAnalysis = {
    ]
  },
 
- "partner-d": {
-   id: "partner-d",
-   name: "Partner D",
-   sportType: "Individual Sport",
-   fundingLevel: "high",
+ "bowls-wales": {
+   id: "bowls-wales",
+   name: "Bowls Wales",
    documentDate: "2025-01-18",
    
    frameworkAlignment: [
@@ -1418,7 +1413,7 @@ const singlePartnerAnalysis = {
      },
      {
        principleId: 1,
-       principleName: "Organizational/Legal Compliance",
+       principleName: "Organisational/Legal Compliance",
        focusAreaCount: 2,
        elements: ["1.2 Safeguarding Children and Adults", "1.6 Clean Sport / Anti-Doping"],
        implementationStatus: "In Progress",
@@ -1488,7 +1483,7 @@ const singlePartnerAnalysis = {
        areaTitle: "Safeguarding",
        cfMapping: {
          principleId: 1,
-         principleName: "Organizational/Legal Compliance",
+         principleName: "Organisational/Legal Compliance",
          elementId: "1.2",
          elementName: "Safeguarding Children and Adults"
        },
@@ -1533,7 +1528,7 @@ const singlePartnerAnalysis = {
        areaTitle: "UKAD",
        cfMapping: {
          principleId: 1,
-         principleName: "Organizational/Legal Compliance",
+         principleName: "Organisational/Legal Compliance",
          elementId: "1.6",
          elementName: "Clean Sport / Anti-Doping"
        },
@@ -1748,7 +1743,7 @@ const singlePartnerAnalysis = {
          activity: "Implement panel recommendations and recruitment",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-02",
          endDate: "2025-07",
@@ -1771,7 +1766,7 @@ const singlePartnerAnalysis = {
          activity: "Panel re-assessment preparation",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-07",
          endDate: "2025-12",
@@ -1840,7 +1835,7 @@ const singlePartnerAnalysis = {
          activity: "Meet UKAD compliance requirements",
          cfMapping: {
            principleId: 1,
-           principleName: "Organizational/Legal Compliance"
+           principleName: "Organisational/Legal Compliance"
          },
          startDate: "2025-03",
          endDate: "2026-03",
@@ -1942,7 +1937,1509 @@ const singlePartnerAnalysis = {
        confidence: 0.89
      }
    ]
- }
+ },
+ "canoe-wales": {
+  // Basic partner information
+  id: "canoe-wales",
+  name: "Canoe Wales",
+  documentDate: "2025-01-22",
+  
+  // Framework alignment summary
+  frameworkAlignment: [
+    {
+      principleId: 3,
+      principleName: "Insight, Engagement & Strategy",
+      focusAreaCount: 2,
+      elements: ["3.1 Strategic Plan", "3.3 EDI (Equality, Diversity & Inclusion)"],
+      implementationStatus: "In Progress",
+      completionPercentage: 20,
+      gipExcerpts: ["Development of a comprehensive new strategy for 2025-2029", "Implement recommendations from the EDI audit"]
+    },
+    {
+      principleId: 1,
+      principleName: "Organisational/Legal Compliance",
+      focusAreaCount: 2,
+      elements: ["1.2 Safeguarding Children and Adults", "1.7 Welsh Language"],
+      implementationStatus: "In Progress",
+      completionPercentage: 35,
+      gipExcerpts: ["Maintain safeguarding standards and seek level 3 accreditation", "Develop our Welsh Language offering"]
+    },
+    {
+      principleId: 2,
+      principleName: "People and Cultures",
+      focusAreaCount: 1,
+      elements: ["2.10 Key Volunteer Management Including Succession Planning"],
+      implementationStatus: "Not Started",
+      completionPercentage: 0,
+      gipExcerpts: ["Create volunteer development and succession plan", "Improve volunteer recruitment and retention"]
+    }
+  ],
+  
+  // Detailed improvement areas from GIP
+  developmentAreas: [
+    {
+      areaId: "strategic-plan-2025-2029",
+      areaTitle: "Strategic Plan Development",
+      cfMapping: {
+        principleId: 3,
+        principleName: "Insight, Engagement & Strategy",
+        elementId: "3.1",
+        elementName: "Strategic Plan"
+      },
+      objective: "Development of a comprehensive new strategy for 2025-2029",
+      actions: [
+        "Establish a strategy working group with board, staff, and member representation",
+        "Review previous strategy and identify successes and areas for improvement",
+        "Conduct stakeholder consultation with clubs, members, and partners",
+        "Develop draft strategic priorities and KPIs",
+        "Present draft strategy to board for feedback",
+        "Finalise and launch the new strategy"
+      ],
+      progressStatus: "In Progress",
+      progressDetails: "Working group has been established and initial review of previous strategy completed",
+      timeframe: "October 2025",
+      leadPerson: "CEO and Board Chair",
+      startDate: "2025-01",
+      endDate: "2025-10"
+    },
+    {
+      areaId: "edi-implementation",
+      areaTitle: "EDI Implementation",
+      cfMapping: {
+        principleId: 3,
+        principleName: "Insight, Engagement & Strategy",
+        elementId: "3.3",
+        elementName: "EDI (Equality, Diversity & Inclusion)"
+      },
+      objective: "Implement recommendations from the EDI audit",
+      actions: [
+        "Review the findings from the 2024 EDI audit",
+        "Prioritise actions into short, medium, and long-term objectives",
+        "Develop EDI action plan with clear ownership and timelines",
+        "Create monitoring framework to track progress",
+        "Provide EDI training for all staff and board members",
+        "Report quarterly on EDI progress to the board"
+      ],
+      progressStatus: "In Progress",
+      progressDetails: "Initial prioritisation of actions complete, action plan in development",
+      timeframe: "Ongoing through 2025-26",
+      leadPerson: "EDI Lead and CEO",
+      startDate: "2025-02",
+      endDate: "2026-03"
+    },
+    {
+      areaId: "safeguarding-level-3",
+      areaTitle: "Safeguarding Enhancement",
+      cfMapping: {
+        principleId: 1,
+        principleName: "Organisational/Legal Compliance",
+        elementId: "1.2",
+        elementName: "Safeguarding Children and Adults"
+      },
+      objective: "Maintain safeguarding standards and seek level 3 accreditation",
+      actions: [
+        "Review and update all safeguarding policies and procedures",
+        "Provide advanced training for all safeguarding leads and officers",
+        "Enhance club support for safeguarding implementation",
+        "Conduct audit of safeguarding practices across the organisation",
+        "Address any identified gaps ahead of level 3 assessment",
+        "Apply for level 3 safeguarding accreditation"
+      ],
+      progressStatus: "In Progress",
+      progressDetails: "Policy review underway, training schedule developed for club safeguarding officers",
+      timeframe: "December 2025",
+      leadPerson: "Safeguarding Lead",
+      startDate: "2025-01",
+      endDate: "2025-12"
+    },
+    {
+      areaId: "welsh-language-enhancement",
+      areaTitle: "Welsh Language Development",
+      cfMapping: {
+        principleId: 1,
+        principleName: "Organisational/Legal Compliance",
+        elementId: "1.7",
+        elementName: "Welsh Language"
+      },
+      objective: "Develop our Welsh Language offering",
+      actions: [
+        "Review current Welsh language provision across all activities and communications",
+        "Identify priority areas for Welsh language enhancement",
+        "Develop a Welsh language action plan",
+        "Provide Welsh language training opportunities for staff",
+        "Create bilingual resources for key programmes and initiatives",
+        "Update website to enhance Welsh language accessibility"
+      ],
+      progressStatus: "In Progress",
+      progressDetails: "Review complete, action plan drafted",
+      timeframe: "March 2026",
+      leadPerson: "Communications Manager",
+      startDate: "2025-03",
+      endDate: "2026-03"
+    },
+    {
+      areaId: "volunteer-management",
+      areaTitle: "Volunteer Development and Succession",
+      cfMapping: {
+        principleId: 2,
+        principleName: "People and Cultures",
+        elementId: "2.10",
+        elementName: "Key Volunteer Management Including Succession Planning"
+      },
+      objective: "Create volunteer development and succession plan",
+      actions: [
+        "Map current volunteer roles and identify critical positions",
+        "Develop role descriptions for all volunteer positions",
+        "Create succession planning templates for clubs and committees",
+        "Establish a volunteer recognition programme",
+        "Implement a volunteer recruitment campaign",
+        "Develop training pathway for volunteers"
+      ],
+      progressStatus: "Not Started",
+      progressDetails: "",
+      timeframe: "September 2025",
+      leadPerson: "Participation Manager",
+      startDate: "2025-04",
+      endDate: "2025-09"
+    }
+  ],
+  
+  // Support requests extracted from GIP
+  supportRequests: [
+    {
+      requestId: "strategic-planning-facilitator",
+      supportArea: "Strategic planning facilitation",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.1",
+        elementName: "Strategic Plan"
+      },
+      requestedTimeline: "2025-03",
+      context: "External facilitator for strategic planning workshops",
+      status: "Requested",
+      developmentArea: "Strategic Plan Development",
+      gipExcerpt: "Support with facilitation of strategic planning workshops to ensure wide stakeholder engagement"
+    },
+    {
+      requestId: "edi-mentoring",
+      supportArea: "EDI mentoring",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.3",
+        elementName: "EDI (Equality, Diversity & Inclusion)"
+      },
+      requestedTimeline: "2025-04",
+      context: "Support from EDI specialist to mentor our EDI Lead",
+      status: "Requested",
+      developmentArea: "EDI Implementation",
+      gipExcerpt: "EDI specialist mentoring for our newly appointed EDI Lead"
+    },
+    {
+      requestId: "safeguarding-assessment-preparation",
+      supportArea: "Safeguarding assessment preparation",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.2",
+        elementName: "Safeguarding Children and Adults"
+      },
+      requestedTimeline: "2025-09",
+      context: "Support to prepare for level 3 safeguarding assessment",
+      status: "Requested",
+      developmentArea: "Safeguarding Enhancement",
+      gipExcerpt: "Pre-assessment support from Child Protection in Sport Unit"
+    },
+    {
+      requestId: "welsh-language-resources",
+      supportArea: "Welsh language translation support",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.7",
+        elementName: "Welsh Language"
+      },
+      requestedTimeline: "2025-06",
+      context: "Support with translation of key resources and materials",
+      status: "Requested",
+      developmentArea: "Welsh Language Development",
+      gipExcerpt: "Welsh language translation support for technical paddlesport terminology"
+    },
+    {
+      requestId: "volunteer-management-guidance",
+      supportArea: "Volunteer management resources",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.10",
+        elementName: "Key Volunteer Management Including Succession Planning"
+      },
+      requestedTimeline: "2025-05",
+      context: "Best practice guidance and templates for volunteer management",
+      status: "Requested",
+      developmentArea: "Volunteer Development and Succession",
+      gipExcerpt: "Access to best practice resources for volunteer recruitment and retention"
+    }
+  ],
+  
+  // Implementation timeline with all activities
+  implementationTimeline: {
+    timelinePeriod: "2025-01-01 to 2026-03-31",
+    activities: [
+      {
+        activityId: "strategy-1",
+        areaTitle: "Strategic Plan Development",
+        activity: "Establish working group and review previous strategy",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-01",
+        endDate: "2025-02",
+        timeframeOriginal: "January-February 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q4 2024-25"
+        },
+        milestone: "Working group established",
+        milestoneDate: "2025-01-31",
+        status: "Completed",
+        statusPercentage: 100,
+        leadPerson: "CEO",
+        dependencies: []
+      },
+      {
+        activityId: "strategy-2",
+        areaTitle: "Strategic Plan Development",
+        activity: "Stakeholder consultation and draft development",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-03",
+        endDate: "2025-06",
+        timeframeOriginal: "March-June 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Draft strategy document",
+        milestoneDate: "2025-06-30",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "CEO and Board Chair",
+        dependencies: ["strategy-1"]
+      },
+      {
+        activityId: "strategy-3",
+        areaTitle: "Strategic Plan Development",
+        activity: "Finalise and launch strategy",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-07",
+        endDate: "2025-10",
+        timeframeOriginal: "July-October 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q2 2025-26",
+          endQuarter: "Q3 2025-26"
+        },
+        milestone: "Strategy launch",
+        milestoneDate: "2025-10-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "CEO and Board Chair",
+        dependencies: ["strategy-2"]
+      },
+      {
+        activityId: "edi-1",
+        areaTitle: "EDI Implementation",
+        activity: "Review audit findings and develop action plan",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-02",
+        endDate: "2025-04",
+        timeframeOriginal: "February-April 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "EDI action plan approved",
+        milestoneDate: "2025-04-30",
+        status: "In Progress",
+        statusPercentage: 40,
+        leadPerson: "EDI Lead",
+        dependencies: []
+      },
+      {
+        activityId: "edi-2",
+        areaTitle: "EDI Implementation",
+        activity: "Staff and board training",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-05",
+        endDate: "2025-08",
+        timeframeOriginal: "May-August 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q2 2025-26"
+        },
+        milestone: "All staff and board trained",
+        milestoneDate: "2025-08-31",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "EDI Lead",
+        dependencies: ["edi-1"]
+      },
+      {
+        activityId: "edi-3",
+        areaTitle: "EDI Implementation",
+        activity: "Implementation and monitoring",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-09",
+        endDate: "2026-03",
+        timeframeOriginal: "September 2025-March 2026",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q2 2025-26",
+          endQuarter: "Q4 2025-26"
+        },
+        milestone: "Annual EDI review",
+        milestoneDate: "2026-03-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "EDI Lead and CEO",
+        dependencies: ["edi-2"]
+      },
+      {
+        activityId: "safeguarding-1",
+        areaTitle: "Safeguarding Enhancement",
+        activity: "Policy review and training",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-01",
+        endDate: "2025-05",
+        timeframeOriginal: "January-May 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Updated policies approved",
+        milestoneDate: "2025-05-31",
+        status: "In Progress",
+        statusPercentage: 30,
+        leadPerson: "Safeguarding Lead",
+        dependencies: []
+      },
+      {
+        activityId: "safeguarding-2",
+        areaTitle: "Safeguarding Enhancement",
+        activity: "Club support and implementation",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-06",
+        endDate: "2025-09",
+        timeframeOriginal: "June-September 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q2 2025-26"
+        },
+        milestone: "Club audit complete",
+        milestoneDate: "2025-09-30",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Safeguarding Lead",
+        dependencies: ["safeguarding-1"]
+      },
+      {
+        activityId: "safeguarding-3",
+        areaTitle: "Safeguarding Enhancement",
+        activity: "Level 3 application and assessment",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-10",
+        endDate: "2025-12",
+        timeframeOriginal: "October-December 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q3 2025-26",
+          endQuarter: "Q3 2025-26"
+        },
+        milestone: "Level 3 assessment",
+        milestoneDate: "2025-12-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Safeguarding Lead",
+        dependencies: ["safeguarding-2"]
+      },
+      {
+        activityId: "welsh-1",
+        areaTitle: "Welsh Language Development",
+        activity: "Review and action planning",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-03",
+        endDate: "2025-05",
+        timeframeOriginal: "March-May 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Welsh language action plan",
+        milestoneDate: "2025-05-31",
+        status: "In Progress",
+        statusPercentage: 70,
+        leadPerson: "Communications Manager",
+        dependencies: []
+      },
+      {
+        activityId: "welsh-2",
+        areaTitle: "Welsh Language Development",
+        activity: "Staff training and resource development",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-06",
+        endDate: "2025-10",
+        timeframeOriginal: "June-October 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q3 2025-26"
+        },
+        milestone: "Key resources available bilingually",
+        milestoneDate: "2025-10-31",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Communications Manager",
+        dependencies: ["welsh-1"]
+      },
+      {
+        activityId: "welsh-3",
+        areaTitle: "Welsh Language Development",
+        activity: "Website update and implementation",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-11",
+        endDate: "2026-03",
+        timeframeOriginal: "November 2025-March 2026",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q3 2025-26",
+          endQuarter: "Q4 2025-26"
+        },
+        milestone: "Fully bilingual website",
+        milestoneDate: "2026-03-31",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Communications Manager",
+        dependencies: ["welsh-2"]
+      },
+      {
+        activityId: "volunteer-1",
+        areaTitle: "Volunteer Development and Succession",
+        activity: "Role mapping and description development",
+        cfMapping: {
+          principleId: 2,
+          principleName: "People and Cultures"
+        },
+        startDate: "2025-04",
+        endDate: "2025-06",
+        timeframeOriginal: "April-June 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Role descriptions complete",
+        milestoneDate: "2025-06-30",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Participation Manager",
+        dependencies: []
+      },
+      {
+        activityId: "volunteer-2",
+        areaTitle: "Volunteer Development and Succession",
+        activity: "Recruitment campaign and recognition programme",
+        cfMapping: {
+          principleId: 2,
+          principleName: "People and Cultures"
+        },
+        startDate: "2025-07",
+        endDate: "2025-09",
+        timeframeOriginal: "July-September 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q2 2025-26",
+          endQuarter: "Q2 2025-26"
+        },
+        milestone: "Volunteer recognition awards",
+        milestoneDate: "2025-09-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Participation Manager",
+        dependencies: ["volunteer-1"]
+      }
+    ]
+  },
+  
+  // Raw text excerpts from GIP
+  gipExcerpts: [
+    {
+      areaTitle: "Strategic Plan Development",
+      text: "Establish a strategy working group with board, staff, and member representation",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.1"
+      },
+      section: "Actions to complete",
+      confidence: 0.95
+    },
+    {
+      areaTitle: "Strategic Plan Development",
+      text: "Development of a comprehensive new strategy for 2025-2029",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.1"
+      },
+      section: "Objectives",
+      confidence: 0.97
+    },
+    {
+      areaTitle: "EDI Implementation",
+      text: "Implement recommendations from the EDI audit",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.3"
+      },
+      section: "Objectives",
+      confidence: 0.94
+    },
+    {
+      areaTitle: "EDI Implementation",
+      text: "Initial prioritisation of actions complete, action plan in development",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.3"
+      },
+      section: "Progress made",
+      confidence: 0.90
+    },
+    {
+      areaTitle: "Safeguarding Enhancement",
+      text: "Provide advanced training for all safeguarding leads and officers",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.2"
+      },
+      section: "Actions to complete",
+      confidence: 0.93
+    },
+    {
+      areaTitle: "Safeguarding Enhancement",
+      text: "Apply for level 3 safeguarding accreditation",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.2"
+      },
+      section: "Actions to complete",
+      confidence: 0.95
+    },
+    {
+      areaTitle: "Welsh Language Development",
+      text: "Develop a Welsh language action plan",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.7"
+      },
+      section: "Actions to complete",
+      confidence: 0.92
+    },
+    {
+      areaTitle: "Welsh Language Development",
+      text: "Review complete, action plan drafted",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.7"
+      },
+      section: "Progress made",
+      confidence: 0.89
+    },
+    {
+      areaTitle: "Volunteer Development and Succession",
+      text: "Create volunteer development and succession plan",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.10"
+      },
+      section: "Objectives",
+      confidence: 0.91
+    },
+    {
+      areaTitle: "Volunteer Development and Succession",
+      text: "Develop training pathway for volunteers",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.10"
+      },
+      section: "Actions to complete",
+      confidence: 0.88
+    }
+  ]
+},
+"girlguiding-cymru": {
+  // Basic partner information
+  id: "girlguiding-cymru",
+  name: "Girlguiding Cymru",
+  documentDate: "2025-01-22",
+  
+  // Framework alignment summary
+  frameworkAlignment: [
+    {
+      principleId: 3,
+      principleName: "Insight, Engagement & Strategy",
+      focusAreaCount: 2,
+      elements: ["3.1 Strategic Plan", "3.3 EDI (Equality, Diversity & Inclusion)"],
+      implementationStatus: "In Progress",
+      completionPercentage: 20,
+      gipExcerpts: ["Development of a comprehensive new strategy for 2025-2029", "Implement recommendations from the EDI audit"]
+    },
+    {
+      principleId: 1,
+      principleName: "Organisational/Legal Compliance",
+      focusAreaCount: 2,
+      elements: ["1.2 Safeguarding Children and Adults", "1.7 Welsh Language"],
+      implementationStatus: "In Progress",
+      completionPercentage: 25,
+      gipExcerpts: ["Maintain safeguarding standards and seek level 3 accreditation", "Develop our Welsh Language offering"]
+    },
+    {
+      principleId: 4,
+      principleName: "People and Cultures",
+      focusAreaCount: 3,
+      elements: ["2.10 Key Volunteer Management Including Succession Planning"],
+      implementationStatus: "Not Started",
+      completionPercentage: 0,
+      gipExcerpts: ["Create volunteer development and succession plan", "Improve volunteer recruitment and retention"]
+    }
+  ],
+  
+  // Detailed improvement areas from GIP
+  developmentAreas: [
+    {
+      areaId: "board-composition",
+      areaTitle: "Review and refresh the organisations board composition",
+      cfMapping: {
+        principleId: 2,
+        principleName: "People and Cultures",
+        elementId: "2.3",
+        elementName: "Directors Recruitment/Appointment"
+      },
+      secondaryCfMapping: {
+        principleId: 2,
+        elementId: "2.5",
+        elementName: "Board/Committee Terms of Office & Composition"
+      },
+      objective: "Align and achieve Sport Wales' target of a gender parity of 60/40, Conduct skills audit, Review Articles",
+      actions: [
+        "Align and achieve Sport Wales' target of a gender parity of 60/40",
+        "Conduct skills audit to ensure board is skilled, balance and diverse",
+        "Review Articles to ensure recruitment and terms of board director are fit for purpose."
+      ],
+      progressStatus: "Not Started",
+      progressDetails: "",
+      timeframe: "July 2025",
+      leadPerson: "Chair",
+      startDate: "2025-02",
+      endDate: "2025-07"
+    },
+    {
+      areaId: "transgender-policy",
+      areaTitle: "Transgender policy to be created",
+      cfMapping: {
+        principleId: 3,
+        principleName: "Insight, Engagement & Strategy",
+        elementId: "3.3",
+        elementName: "EDI (Equality, Diversity & Inclusion)"
+      },
+      objective: "Create inclusive transgender policy",
+      actions: [
+        "All board and executive to engage and attend Guidance workshops",
+        "Consultation with members",
+        "Policy creation",
+        "Policy approval",
+        "Policy outstretch"
+      ],
+      progressStatus: "Not Started",
+      progressDetails: "",
+      timeframe: "February 2026",
+      leadPerson: "EDI manager",
+      startDate: "2025-05",
+      endDate: "2026-02"
+    },
+    {
+      areaId: "board-meetings",
+      areaTitle: "Board meetings to become more effective",
+      cfMapping: {
+        principleId: 4,
+        principleName: "Effectively Run Organisation",
+        elementId: "4.1",
+        elementName: "Effective Meetings"
+      },
+      objective: "Improve board meeting effectiveness",
+      actions: [
+        "Agenda format to be reviewed and revised",
+        "Board directors to complete survey feedback",
+        "Reflective away day for board"
+      ],
+      progressStatus: "Not Started",
+      progressDetails: "",
+      timeframe: "September 2025",
+      leadPerson: "Chair",
+      startDate: "2025-03",
+      endDate: "2025-09"
+    },
+    {
+      areaId: "safeguarding-level-2",
+      areaTitle: "Achieve Level 2 Safeguarding",
+      cfMapping: {
+        principleId: 1,
+        principleName: "Organisational/Legal Compliance",
+        elementId: "1.2",
+        elementName: "Safeguarding Children and Adults"
+      },
+      objective: "Achieve Level 2 Safeguarding certification",
+      actions: [
+        "Engage with CPSU to create action plan",
+        "Outstretch action plan",
+        "Attend panel assessment"
+      ],
+      progressStatus: "Not Started",
+      progressDetails: "",
+      timeframe: "March 2025",
+      leadPerson: "Safeguarding lead",
+      startDate: "2025-01",
+      endDate: "2025-03"
+    }
+  ],
+  
+  // Support requests extracted from GIP
+  supportRequests: [
+    {
+      requestId: "strategic-planning-facilitator",
+      supportArea: "Strategic planning facilitation",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.1",
+        elementName: "Strategic Plan"
+      },
+      requestedTimeline: "2025-03",
+      context: "External facilitator for strategic planning workshops",
+      status: "Requested",
+      developmentArea: "Strategic Plan Development",
+      gipExcerpt: "Support with facilitation of strategic planning workshops to ensure wide stakeholder engagement"
+    },
+    {
+      requestId: "edi-mentoring",
+      supportArea: "EDI mentoring",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.3",
+        elementName: "EDI (Equality, Diversity & Inclusion)"
+      },
+      requestedTimeline: "2025-04",
+      context: "Support from EDI specialist to mentor our EDI Lead",
+      status: "Requested",
+      developmentArea: "EDI Implementation",
+      gipExcerpt: "EDI specialist mentoring for our newly appointed EDI Lead"
+    },
+    {
+      requestId: "safeguarding-assessment-preparation",
+      supportArea: "Safeguarding assessment preparation",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.2",
+        elementName: "Safeguarding Children and Adults"
+      },
+      requestedTimeline: "2025-09",
+      context: "Support to prepare for level 3 safeguarding assessment",
+      status: "Requested",
+      developmentArea: "Safeguarding Enhancement",
+      gipExcerpt: "Pre-assessment support from Child Protection in Sport Unit"
+    },
+    {
+      requestId: "welsh-language-resources",
+      supportArea: "Welsh language translation support",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.7",
+        elementName: "Welsh Language"
+      },
+      requestedTimeline: "2025-06",
+      context: "Support with translation of key resources and materials",
+      status: "Requested",
+      developmentArea: "Welsh Language Development",
+      gipExcerpt: "Welsh language translation support for technical paddlesport terminology"
+    },
+    {
+      requestId: "volunteer-management-guidance",
+      supportArea: "Volunteer management resources",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.10",
+        elementName: "Key Volunteer Management Including Succession Planning"
+      },
+      requestedTimeline: "2025-05",
+      context: "Best practice guidance and templates for volunteer management",
+      status: "Requested",
+      developmentArea: "Volunteer Development and Succession",
+      gipExcerpt: "Access to best practice resources for volunteer recruitment and retention"
+    }
+  ],
+  
+  // Implementation timeline with all activities
+  implementationTimeline: {
+    timelinePeriod: "2025-01-01 to 2026-03-31",
+    activities: [
+      {
+        activityId: "strategy-1",
+        areaTitle: "Strategic Plan Development",
+        activity: "Establish working group and review previous strategy",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-01",
+        endDate: "2025-02",
+        timeframeOriginal: "January-February 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q4 2024-25"
+        },
+        milestone: "Working group established",
+        milestoneDate: "2025-01-31",
+        status: "Completed",
+        statusPercentage: 100,
+        leadPerson: "CEO",
+        dependencies: []
+      },
+      {
+        activityId: "strategy-2",
+        areaTitle: "Strategic Plan Development",
+        activity: "Stakeholder consultation and draft development",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-03",
+        endDate: "2025-06",
+        timeframeOriginal: "March-June 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Draft strategy document",
+        milestoneDate: "2025-06-30",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "CEO and Board Chair",
+        dependencies: ["strategy-1"]
+      },
+      {
+        activityId: "strategy-3",
+        areaTitle: "Strategic Plan Development",
+        activity: "Finalise and launch strategy",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-07",
+        endDate: "2025-10",
+        timeframeOriginal: "July-October 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q2 2025-26",
+          endQuarter: "Q3 2025-26"
+        },
+        milestone: "Strategy launch",
+        milestoneDate: "2025-10-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "CEO and Board Chair",
+        dependencies: ["strategy-2"]
+      },
+      {
+        activityId: "edi-1",
+        areaTitle: "EDI Implementation",
+        activity: "Review audit findings and develop action plan",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-02",
+        endDate: "2025-04",
+        timeframeOriginal: "February-April 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "EDI action plan approved",
+        milestoneDate: "2025-04-30",
+        status: "In Progress",
+        statusPercentage: 40,
+        leadPerson: "EDI Lead",
+        dependencies: []
+      },
+      {
+        activityId: "edi-2",
+        areaTitle: "EDI Implementation",
+        activity: "Staff and board training",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-05",
+        endDate: "2025-08",
+        timeframeOriginal: "May-August 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q2 2025-26"
+        },
+        milestone: "All staff and board trained",
+        milestoneDate: "2025-08-31",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "EDI Lead",
+        dependencies: ["edi-1"]
+      },
+      {
+        activityId: "edi-3",
+        areaTitle: "EDI Implementation",
+        activity: "Implementation and monitoring",
+        cfMapping: {
+          principleId: 3,
+          principleName: "Insight, Engagement & Strategy"
+        },
+        startDate: "2025-09",
+        endDate: "2026-03",
+        timeframeOriginal: "September 2025-March 2026",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q2 2025-26",
+          endQuarter: "Q4 2025-26"
+        },
+        milestone: "Annual EDI review",
+        milestoneDate: "2026-03-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "EDI Lead and CEO",
+        dependencies: ["edi-2"]
+      },
+      {
+        activityId: "safeguarding-1",
+        areaTitle: "Safeguarding Enhancement",
+        activity: "Policy review and training",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-01",
+        endDate: "2025-05",
+        timeframeOriginal: "January-May 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Updated policies approved",
+        milestoneDate: "2025-05-31",
+        status: "In Progress",
+        statusPercentage: 30,
+        leadPerson: "Safeguarding Lead",
+        dependencies: []
+      },
+      {
+        activityId: "safeguarding-2",
+        areaTitle: "Safeguarding Enhancement",
+        activity: "Club support and implementation",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-06",
+        endDate: "2025-09",
+        timeframeOriginal: "June-September 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q2 2025-26"
+        },
+        milestone: "Club audit complete",
+        milestoneDate: "2025-09-30",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Safeguarding Lead",
+        dependencies: ["safeguarding-1"]
+      },
+      {
+        activityId: "safeguarding-3",
+        areaTitle: "Safeguarding Enhancement",
+        activity: "Level 3 application and assessment",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-10",
+        endDate: "2025-12",
+        timeframeOriginal: "October-December 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q3 2025-26",
+          endQuarter: "Q3 2025-26"
+        },
+        milestone: "Level 3 assessment",
+        milestoneDate: "2025-12-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Safeguarding Lead",
+        dependencies: ["safeguarding-2"]
+      },
+      {
+        activityId: "welsh-1",
+        areaTitle: "Welsh Language Development",
+        activity: "Review and action planning",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-03",
+        endDate: "2025-05",
+        timeframeOriginal: "March-May 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q4 2024-25",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Welsh language action plan",
+        milestoneDate: "2025-05-31",
+        status: "In Progress",
+        statusPercentage: 70,
+        leadPerson: "Communications Manager",
+        dependencies: []
+      },
+      {
+        activityId: "welsh-2",
+        areaTitle: "Welsh Language Development",
+        activity: "Staff training and resource development",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-06",
+        endDate: "2025-10",
+        timeframeOriginal: "June-October 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q3 2025-26"
+        },
+        milestone: "Key resources available bilingually",
+        milestoneDate: "2025-10-31",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Communications Manager",
+        dependencies: ["welsh-1"]
+      },
+      {
+        activityId: "welsh-3",
+        areaTitle: "Welsh Language Development",
+        activity: "Website update and implementation",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-11",
+        endDate: "2026-03",
+        timeframeOriginal: "November 2025-March 2026",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q3 2025-26",
+          endQuarter: "Q4 2025-26"
+        },
+        milestone: "Fully bilingual website",
+        milestoneDate: "2026-03-31",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Communications Manager",
+        dependencies: ["welsh-2"]
+      },
+      {
+        activityId: "volunteer-1",
+        areaTitle: "Volunteer Development and Succession",
+        activity: "Role mapping and description development",
+        cfMapping: {
+          principleId: 2,
+          principleName: "People and Cultures"
+        },
+        startDate: "2025-04",
+        endDate: "2025-06",
+        timeframeOriginal: "April-June 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q1 2025-26",
+          endQuarter: "Q1 2025-26"
+        },
+        milestone: "Role descriptions complete",
+        milestoneDate: "2025-06-30",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Participation Manager",
+        dependencies: []
+      },
+      {
+        activityId: "volunteer-2",
+        areaTitle: "Volunteer Development and Succession",
+        activity: "Recruitment campaign and recognition programme",
+        cfMapping: {
+          principleId: 2,
+          principleName: "People and Cultures"
+        },
+        startDate: "2025-07",
+        endDate: "2025-09",
+        timeframeOriginal: "July-September 2025",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "Q2 2025-26",
+          endQuarter: "Q2 2025-26"
+        },
+        milestone: "Volunteer recognition awards",
+        milestoneDate: "2025-09-15",
+        status: "Not Started",
+        statusPercentage: 0,
+        leadPerson: "Participation Manager",
+        dependencies: ["volunteer-1"]
+      }
+    ]
+  },
+  
+  // Raw text excerpts from GIP
+  gipExcerpts: [
+    {
+      areaTitle: "Strategic Plan Development",
+      text: "Establish a strategy working group with board, staff, and member representation",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.1"
+      },
+      section: "Actions to complete",
+      confidence: 0.95
+    },
+    {
+      areaTitle: "Strategic Plan Development",
+      text: "Development of a comprehensive new strategy for 2025-2029",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.1"
+      },
+      section: "Objectives",
+      confidence: 0.97
+    },
+    {
+      areaTitle: "EDI Implementation",
+      text: "Implement recommendations from the EDI audit",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.3"
+      },
+      section: "Objectives",
+      confidence: 0.94
+    },
+    {
+      areaTitle: "EDI Implementation",
+      text: "Initial prioritisation of actions complete, action plan in development",
+      cfMapping: {
+        principleId: 3,
+        elementId: "3.3"
+      },
+      section: "Progress made",
+      confidence: 0.90
+    },
+    {
+      areaTitle: "Safeguarding Enhancement",
+      text: "Provide advanced training for all safeguarding leads and officers",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.2"
+      },
+      section: "Actions to complete",
+      confidence: 0.93
+    },
+    {
+      areaTitle: "Safeguarding Enhancement",
+      text: "Apply for level 3 safeguarding accreditation",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.2"
+      },
+      section: "Actions to complete",
+      confidence: 0.95
+    },
+    {
+      areaTitle: "Welsh Language Development",
+      text: "Develop a Welsh language action plan",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.7"
+      },
+      section: "Actions to complete",
+      confidence: 0.92
+    },
+    {
+      areaTitle: "Welsh Language Development",
+      text: "Review complete, action plan drafted",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.7"
+      },
+      section: "Progress made",
+      confidence: 0.89
+    },
+    {
+      areaTitle: "Volunteer Development and Succession",
+      text: "Create volunteer development and succession plan",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.10"
+      },
+      section: "Objectives",
+      confidence: 0.91
+    },
+    {
+      areaTitle: "Volunteer Development and Succession",
+      text: "Develop training pathway for volunteers",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.10"
+      },
+      section: "Actions to complete",
+      confidence: 0.88
+    }
+  ]
+},
+"hockey-wales": {
+  id: "hockey-wales",
+  name: "Hockey Wales",
+  documentDate: "2025-03-15",
+
+  frameworkAlignment: [
+    {
+      principleId: 1,
+      principleName: "Organisational/Legal Compliance",
+      focusAreaCount: 2,
+      elements: ["1.1 Governing Document(s) and Review", "1.5 Comply with Legal Requirements"],
+      implementationStatus: "In Progress",
+      completionPercentage: 40,
+      gipExcerpts: [
+        "Full constitutional review scheduled for Q3 2025",
+        "Legal compliance audit completed Q1 2025"
+      ]
+    },
+    {
+      principleId: 2,
+      principleName: "People and Cultures",
+      focusAreaCount: 3,
+      elements: ["2.3 Organisational Culture and Behaviours", "2.6 Board Review and Evaluation", "2.7 Board and Employee Training & Development"],
+      implementationStatus: "Not Started",
+      completionPercentage: 10,
+      gipExcerpts: [
+        "New diversity and inclusion initiative planned"
+      ]
+    }
+  ],
+
+  developmentAreas: [
+    {
+      areaId: "DA-HW-01",
+      areaTitle: "Governance Structure Modernization",
+      cfMapping: {
+        principleId: 1,
+        principleName: "Organisational/Legal Compliance",
+        elementId: "1.1",
+        elementName: "Governing Document(s) and Review"
+      },
+      objective: "Update constitution and governance framework",
+      actions: [
+        "Form constitutional review working group",
+        "Benchmark against Sport Wales guidelines",
+        "Consult membership on proposed changes",
+        "Submit revised constitution for AGM approval"
+      ],
+      progressStatus: "In Progress",
+      progressDetails: "Working group formed, initial draft completed",
+      timeframe: "2025 Q2 - 2026 Q1",
+      leadPerson: "Chairperson - Gareth Thomas",
+      startDate: "2025-04-01",
+      endDate: "2026-01-31"
+    },
+    {
+      areaId: "DA-HW-02",
+      areaTitle: "Board Development Programme",
+      cfMapping: {
+        principleId: 2,
+        principleName: "People and Cultures", 
+        elementId: "2.7",
+        elementName: "Board and Employee Training & Development"
+      },
+      objective: "Enhance board governance capabilities",
+      actions: [
+        "Conduct skills gap analysis",
+        "Develop annual training plan",
+        "Implement mentoring scheme",
+        "Establish performance evaluation process"
+      ],
+      progressStatus: "Not Started",
+      progressDetails: "",
+      timeframe: "2025 Q3 - 2026 Q2",
+      leadPerson: "Vice Chair - Sian Davies",
+      startDate: "2025-07-01",
+      endDate: "2026-06-30"
+    }
+  ],
+
+  supportRequests: [
+    {
+      requestId: "SR-HW-001",
+      supportArea: "Constitutional Review",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.1",
+        elementName: "Governing Document(s) and Review"
+      },
+      requestedTimeline: "2025-09",
+      context: "Request legal support for constitutional amendments",
+      status: "Requested",
+      developmentArea: "DA-HW-01",
+      gipExcerpt: "Seeking Sport Wales legal team input on proposed constitutional changes"
+    },
+    {
+      requestId: "SR-HW-002",
+      supportArea: "Board Training",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.7",
+        elementName: "Board and Employee Training & Development"
+      },
+      requestedTimeline: "2025-08",
+      context: "Request access to governance training resources",
+      status: "Requested",
+      developmentArea: "DA-HW-02",
+      gipExcerpt: "Need access to Sport Wales board development toolkit and training materials"
+    }
+  ],
+
+  implementationTimeline: {
+    timelinePeriod: "2025-04-01 to 2026-06-30",
+    activities: [
+      {
+        activityId: "ACT-HW-01",
+        areaTitle: "Governance Structure Modernization",
+        activity: "Constitutional review working group formation",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-04-01",
+        endDate: "2025-05-15",
+        timeframeOriginal: "Phase 1 - Setup",
+        timeframeStandardized: {
+          type: "quarter",
+          startQuarter: "2025 Q2",
+          endQuarter: "2025 Q2"
+        },
+        milestone: "Working group operational",
+        milestoneDate: "2025-05-01",
+        status: "Completed",
+        statusPercentage: 100,
+        leadPerson: "Chairperson - Gareth Thomas",
+        dependencies: []
+      },
+      {
+        activityId: "ACT-HW-02",
+        areaTitle: "Governance Structure Modernization",
+        activity: "Draft constitution consultation",
+        cfMapping: {
+          principleId: 1,
+          principleName: "Organisational/Legal Compliance"
+        },
+        startDate: "2025-06-01",
+        endDate: "2025-08-31",
+        timeframeOriginal: "Phase 2 - Consultation",
+        timeframeStandardized: {
+          type: "range",
+          startQuarter: "2025 Q2",
+          endQuarter: "2025 Q3"
+        },
+        milestone: "Consultation report finalized",
+        milestoneDate: "2025-09-15",
+        status: "In Progress",
+        statusPercentage: 30,
+        leadPerson: "Company Secretary - Owen Rees",
+        dependencies: ["ACT-HW-01"]
+      }
+    ]
+  },
+
+  gipExcerpts: [
+    {
+      areaTitle: "Governance Structure Modernization",
+      text: "Constitutional review working group to include board members and external legal advisor",
+      cfMapping: {
+        principleId: 1,
+        elementId: "1.1"
+      },
+      section: "Governance Improvement Plan Section 4.2",
+      confidence: 0.95
+    },
+    {
+      areaTitle: "Board Development Programme",
+      text: "Annual training plan to include financial governance and strategic leadership modules",
+      cfMapping: {
+        principleId: 2,
+        elementId: "2.7"
+      },
+      section: "Capability Development Priorities",
+      confidence: 0.90
+    }
+  ]
+}
 };
 
 export default singlePartnerAnalysis;

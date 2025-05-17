@@ -1,40 +1,111 @@
-// src/app/data/partners.js
-const partners = [
-    {
-      id: 'partner-a',
-      name: 'Partner A',
-      sportType: 'Team Sport',
-      fundingLevel: 'high',
-      hasGip: true
-    },
-    {
-      id: 'partner-b',
-      name: 'Partner B',
-      sportType: 'Individual Sport',
-      fundingLevel: 'medium',
-      hasGip: true
-    },
-    {
-      id: 'sport-u',
-      name: 'Sport U',
-      sportType: 'Team Sport',
-      fundingLevel: 'medium',
-      hasGip: true
-    },
-    {
-      id: 'sport-y',
-      name: 'Sport Y',
-      sportType: 'Individual Sport',
-      fundingLevel: 'high',
-      hasGip: true
-    },
-    {
-      id: 'sport-z',
-      name: 'Sport Z',
-      sportType: 'Water Sport',
-      fundingLevel: 'low',
-      hasGip: false
-    }
-  ];
+// // src/app/data/partners.js
+// const partners = [
+//     {
+//       id: 'partner-a',
+//       name: 'Partner A',
+//       sportType: 'Team Sport',
+//       fundingLevel: 'high',
+//       hasGip: true
+//     },
+//     {
+//       id: 'partner-b',
+//       name: 'Partner B',
+//       sportType: 'Individual Sport',
+//       fundingLevel: 'medium',
+//       hasGip: true
+//     },
+//     {
+//       id: 'sport-u',
+//       name: 'Sport U',
+//       sportType: 'Team Sport',
+//       fundingLevel: 'medium',
+//       hasGip: true
+//     },
+//     {
+//       id: 'sport-y',
+//       name: 'Sport Y',
+//       sportType: 'Individual Sport',
+//       fundingLevel: 'high',
+//       hasGip: true
+//     },
+//     {
+//       id: 'sport-z',
+//       name: 'Sport Z',
+//       sportType: 'Water Sport',
+//       fundingLevel: 'low',
+//       hasGip: false
+//     }
+//   ];
   
-  export default partners;
+//   export default partners;
+
+
+
+export const partners = {
+  'National Governing Bodies': [
+    { id: 'angling-cymru', name: 'Angling Cymru', sport: 'Fishing' },
+    { id: 'badminton-wales', name: 'Badminton Wales', sport: 'Badminton' },
+    { id: 'basketball-wales', name: 'Basketball Wales', sport: 'Basketball' },
+    { id: 'bowls-wales', name: 'Bowls Wales', sport: 'Bowls' },
+    { id: 'canoe-wales', name: 'Canoe Wales', sport: 'Canoeing' },
+    { id: 'commonwealth-games-wales', name: 'Commonwealth Games Wales', sport: 'Multi-sport' },
+    { id: 'cricket-wales', name: 'Cricket Wales', sport: 'Cricket' },
+    { id: 'faw', name: 'Football Association of Wales', sport: 'Football' },
+    { id: 'hockey-wales', name: 'Hockey Wales', sport: 'Hockey' },
+    { id: 'rya-cymru', name: 'RYA-Cymru Wales', sport: 'Sailing' },
+    { id: 'snowsport-cymru', name: 'Snowsport Cymru Wales', sport: 'Snowsports' },
+    { id: 'squash-wales', name: 'Squash Wales', sport: 'Squash' },
+    { id: 'surf-ls-wales', name: 'Surf Life Saving Association Wales', sport: 'Surf Life Saving' },
+    { id: 'swim-wales', name: 'Swim Wales', sport: 'Swimming' },
+    { id: 'tenpin-bowling', name: 'Tenpin Bowls', sport: 'Bowling' },
+    { id: 'tennis-wales', name: 'Tennis Wales', sport: 'Tennis' },
+    { id: 'tt-wales', name: 'Table Tennis Wales', sport: 'Table Tennis' },
+    { id: 'tug-of-war', name: 'Tug of War', sport: 'Tug of War' },
+    { id: 'volleyball-wales', name: 'Volleyball Wales', sport: 'Volleyball' },
+    { id: 'wales-golf', name: 'Wales Golf', sport: 'Golf' },
+    { id: 'wales-lacrosse', name: 'Wales Lacrosse', sport: 'Lacrosse' },
+    { id: 'wales-netball', name: 'Wales Netball', sport: 'Netball' },
+    { id: 'wales-rugby-league', name: 'Wales Rugby League', sport: 'Rugby League' },
+    { id: 'wales-weightlifting', name: 'Wales Weightlifting', sport: 'Weightlifting' },
+    { id: 'welsh-archery', name: 'Welsh Archery Association', sport: 'Archery' },
+    { id: 'welsh-athletics', name: 'Welsh Athletics', sport: 'Athletics' },
+    { id: 'welsh-billiards', name: 'Welsh Billiards & Snooker Association', sport: 'Billiards & Snooker' },
+    { id: 'welsh-boxing', name: 'Welsh Boxing', sport: 'Boxing' },
+    { id: 'welsh-caving', name: 'Caving', sport: 'Caving' },
+    { id: 'welsh-curling', name: 'Welsh Curling Association', sport: 'Curling' },
+    { id: 'welsh-cycling', name: 'Welsh Cycling', sport: 'Cycling' },
+    { id: 'welsh-fencing', name: 'Welsh Fencing', sport: 'Fencing' },
+    { id: 'welsh-gymnastics', name: 'Welsh Gymnastics', sport: 'Gymnastics' },
+    { id: 'welsh-judo', name: 'Welsh Judo Association', sport: 'Judo' },
+    { id: 'welsh-karate', name: 'Welsh Karate Governing Body', sport: 'Karate' },
+    { id: 'welsh-motorcycling', name: 'Motorcycling', sport: 'Motorcycling' },
+    { id: 'welsh-orienteering', name: 'Welsh Orienteering Association', sport: 'Orienteering' },
+    { id: 'welsh-pool', name: 'Pool', sport: 'Pool' },
+    { id: 'welsh-rowing', name: 'Welsh Rowing', sport: 'Rowing' },
+    { id: 'welsh-shooting', name: 'Welsh Target Shooting Federation', sport: 'Shooting' },
+    { id: 'welsh-triathlon', name: 'Welsh Triathlon', sport: 'Triathlon' },
+    { id: 'welsh-wrestling', name: 'Welsh Wrestling', sport: 'Wrestling' },
+    { id: 'wru', name: 'Welsh Rugby Union', sport: 'Rugby Union' }
+  ],
+  'National Partners': [
+    { id: 'black-swimming', name: 'Black Swimming Association', sport: 'Swimming' },
+    { id: 'colegau-cymru', name: 'Colegau Cymru', sport: 'Education' },
+    { id: 'disability-sport-wales', name: 'Disability Sport Wales', sport: 'Multi-sport' },
+    { id: 'girlguiding-cymru', name: 'Girlguiding Cymru', sport: 'Multi-sport' },
+    { id: 'leadership-skills', name: 'Leadership Skills Foundation', sport: 'Multi-sport' },
+    { id: 'outdoor-partnership', name: 'The Outdoor Partnership', sport: 'Multi-sport' },
+    { id: 'streetgames', name: 'StreetGames', sport: 'Multi-sport' },
+    { id: 'udoit-dance', name: 'UDOIT Dance Foundation', sport: 'Dance' },
+    { id: 'urdd', name: 'The Urdd', sport: 'Multi-sport' },
+    { id: 'welsh-sports-association', name: 'Welsh Sports Association', sport: 'Multi-sport' },
+    { id: 'wcva', name: 'Welsh Charity Voluntary Action', sport: 'Multi-sport' },
+    { id: 'youth-sport-trust', name: 'Youth Sport Trust', sport: 'Multi-sport' }
+  ],
+  'Sport Partnerships': [
+    { id: 'central-south-sp', name: 'Central South Sport Partnership', sport: 'Multi-sport' },
+    { id: 'gwent-sp', name: 'Gwent Sport Partnership', sport: 'Multi-sport' },
+    { id: 'mid-wales-sp', name: 'Mid Wales Sport Partnership', sport: 'Multi-sport' },
+    { id: 'north-wales-sp', name: 'North Wales Sport Partnership', sport: 'Multi-sport' },
+    { id: 'west-wales-sp', name: 'West Wales Sport Partnership', sport: 'Multi-sport' }
+  ]
+};
