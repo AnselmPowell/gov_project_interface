@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useAnalysis } from '@/app/contexts/AnalysisContext.client';
+import { useAnalysis } from '../../contexts/AnalysisContext.client';
 import { 
   BarChart2, 
   Upload, 

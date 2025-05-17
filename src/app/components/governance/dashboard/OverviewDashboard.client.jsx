@@ -6,9 +6,10 @@ import { useAnalysis } from '../../../contexts/AnalysisContext.client';
 import PieChart from '../charts/PieChart.client';
 import DevelopmentAreaDistribution from './DevelopmentAreaDistribution.client';
 import AnomalyCard from './AnomalyCard.client';
-import { calculateThemeDistribution, identifyAnomalies } from '@/app/utils/dataTransformations';
+import { calculateThemeDistribution, identifyAnomalies } from '../../../utils/dataTransformations';
 import { Users, Clock, AlignJustify, Filter, X, ChevronDown, ChevronUp, ExternalLink, CheckCircle2, AlertCircle } from 'lucide-react';
 import singlePartnerAnalysis from '../../../../data/singlePartnerAnalysis';
+
 
 export default function OverviewDashboard({ viewMode }) {
   const { 

@@ -6,7 +6,7 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, Filter, Download } from 'lucide-react';
-import { useAnalysis } from '@/app/contexts/AnalysisContext.client';
+import { useAnalysis } from '../../../contexts/AnalysisContext.client';
 import PrinciplesSummary from './PrinciplesSummary.client';
 import SupportAnalysis from './SupportAnalysis.client';
 import TimelineView from './TimelineView.client';

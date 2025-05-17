@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { AnalysisProvider, useAnalysis } from '@/app/contexts/AnalysisContext.client';
+import { AnalysisProvider, useAnalysis } from '../../contexts/AnalysisContext.client';
 import PartnerListSidebar from './sidebar/PartnerListSidebar.client';
 import UploadSection from './upload/UploadSection.client';
 import DashboardContent from './dashboard/DashboardContent.client';

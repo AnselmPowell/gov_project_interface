@@ -3,7 +3,7 @@
 ```jsx
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'react-feather';
-import { useAnalysis } from '@/contexts/AnalysisContext.client';
+import { useAnalysis } from '../../contexts/AnalysisContext.client';
 
 const DevelopmentAreasDetailContent = ({ details }) => {
   const { viewMode, data } = details;

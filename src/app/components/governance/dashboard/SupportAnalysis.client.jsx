@@ -2,8 +2,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useAnalysis } from '@/app/contexts/AnalysisContext.client';
-import { generateSupportRequestMatrix } from '@/app/utils/dataTransformations';
+import { useAnalysis } from '../../../contexts/AnalysisContext.client';
+import { generateSupportRequestMatrix } from '../../../utils/dataTransformations';
 import { Calendar, Clock, Users, ArrowRight } from 'lucide-react';
 
 export default function SupportAnalysis({ data, viewMode }) {

@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { identifyAnomalies } from '@/app/utils/dataTransformations';
+import { identifyAnomalies } from '../../../utils/dataTransformations';
 import { AlertTriangle, ArrowRight, PlusCircle } from 'lucide-react';
 
 export default function AnomalyCard({ data, viewMode }) {

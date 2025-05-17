@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import { Search, CheckSquare, Square, ChevronLeft, ChevronRight, Users, Filter, Upload, ChevronDown, ChevronUp, FileText } from 'lucide-react';
-import { useAnalysis } from '@/app/contexts/AnalysisContext.client';
+import { useAnalysis } from '../../../contexts/AnalysisContext.client';
 
 export default function PartnerListSidebar() {
   const { 

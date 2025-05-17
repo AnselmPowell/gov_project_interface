@@ -2,8 +2,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useAnalysis } from '@/app/contexts/AnalysisContext.client';
-import { generateThemeHeatMap } from '@/app/utils/dataTransformations';
+import { useAnalysis } from '../../../contexts/AnalysisContext.client';
+import { generateThemeHeatMap } from '../../../utils/dataTransformations';
 
 export default function PrinciplesSummary({ data, viewMode }) {
   const { selectedPrinciple, setSelectedPrinciple } = useAnalysis();

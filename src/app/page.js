@@ -2,9 +2,9 @@
 'use client';
 
 import Head from 'next/head';
-import { useAuth } from '@/app/hooks/useAuth';
+import { useAuth } from '../app/hooks/useAuth';
 // Use default import instead of named import
-import GovernanceAnalysis from '@/app/components/governance/GovernanceAnalysis.client';
+import GovernanceAnalysis from '../app/components/governance/GovernanceAnalysis.client';
 
 export default function HomePage() {
     const { user } = useAuth();
