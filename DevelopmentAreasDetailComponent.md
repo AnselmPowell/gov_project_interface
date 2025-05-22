@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import { useAnalysis } from '../../contexts/AnalysisContext.client';
-
+S
 const DevelopmentAreasDetailContent = ({ details }) => {
   const { viewMode, data } = details;
   const [selectedStatus, setSelectedStatus] = useState('all');
@@ -36,8 +36,8 @@ const DevelopmentAreasDetailContent = ({ details }) => {
     return (
       <div className="space-y-6 p-4">
         {/* Header Section */}
-        <div className="bg-sw-blue/5 p-6 rounded-xl border-l-4 border-sw-blue">
-          <h2 className="text-2xl font-bold text-sw-blue mb-2">
+        <div className="sw-bg-blue/5 p-6 rounded-xl border-l-4 border-sw-blue">
+          <h2 className="text-2xl font-bold sw-text-blue mb-2">
             Development Areas Analysis
           </h2>
           <div className="grid grid-cols-3 gap-4">
@@ -98,15 +98,15 @@ const DevelopmentAreasDetailContent = ({ details }) => {
               <div key={index} className="bg-white p-4 rounded-lg shadow-sm border border-sw-blue/10">
                 {/* Area Header */}
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-lg font-semibold text-sw-blue">
+                  <h3 className="text-lg font-semibold sw-text-blue">
                     {area.areaTitle}
                   </h3>
                   <StatusBadge status={area.progressStatus} />
                 </div>
 
                 {/* CF Mapping */}
-                <div className="bg-sw-blue/5 p-3 rounded-md mb-3">
-                  <p className="text-sm text-sw-blue">
+                <div className="sw-bg-blue/5 p-3 rounded-md mb-3">
+                  <p className="text-sm sw-text-blue">
                     {getPrincipleName(area.cfMapping.principleId)} > {area.cfMapping.elementName}
                   </p>
                 </div>
@@ -165,20 +165,20 @@ const FilterSelect = ({ label, options, value, onChange }) => (
 
 const StatusBadge = ({ status }) => (
   <span className={`px-3 py-1 rounded-full text-sm ${
-    status === 'Completed' ? 'bg-sw-green text-white' :
-    status === 'In Progress' ? 'bg-sw-blue text-white' :
-    'bg-sw-red/10 text-sw-red'
+    status === 'Completed' ? 'sw-bg-green text-white' :
+    status === 'In Progress' ? 'sw-bg-blue text-white' :
+    'sw-bg-red/10 sw-text-red'
   }`}>
     {status || 'Not Started'}
   </span>
 );
 
 const ExcerptSection = ({ excerpts, expanded, toggle }) => (
-  <div className="bg-sw-yellow/5 p-3 rounded-md border-l-4 border-sw-yellow">
+  <div className="sw-bg-yellow/5 p-3 rounded-md border-l-4 border-sw-yellow">
     <div className="flex justify-between items-center mb-2">
-      <span className="text-sm font-medium text-sw-yellow">GIP Excerpts</span>
+      <span className="text-sm font-medium sw-text-yellow">GIP Excerpts</span>
       <button 
-        className="text-sw-yellow hover:text-sw-yellow/70"
+        className="sw-text-yellow hover:sw-text-yellow/70"
         onClick={() => toggle(excerpts[0].id)}
       >
         {expanded.has(excerpts[0].id) ? <ChevronUp size={16} /> : <ChevronDown size={16} />}

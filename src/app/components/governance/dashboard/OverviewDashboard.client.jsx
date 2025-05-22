@@ -885,7 +885,7 @@ function DetailModal({ type, details, onClose }) {
           <button 
             onClick={onClose}
             className="p-2 rounded-full hover:bg-tertiary/10 text-tertiary hover:text-primary transition-colors"
-          >
+          > 
             <X size={20} />
           </button>
         </div>
@@ -1005,7 +1005,7 @@ function FocusAreasDetailContent({ details }) {
       <div className="space-y-6">
         {/* Partner header with stats */}
         <div className="bg-white rounded-lg p-4 border-l-4 border-sw-blue shadow-sm">
-          <h3 className="text-xl font-bold text-sw-blue">
+          <h3 className="text-xl font-bold sw-text-blue">
             {data?.name || 'Partner'} <span className="text-primary">Focus Areas</span>
           </h3>
           <p className="text-secondary mt-1">
@@ -1015,25 +1015,25 @@ function FocusAreasDetailContent({ details }) {
           {/* Status counts as badges */}
           <div className="flex flex-wrap gap-2 mt-3">
             <div 
-              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'all' ? 'bg-sw-blue text-white' : 'bg-white text-secondary border-tertiary/30'}`}
+              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'all' ? 'sw-bg-blue text-white font-weight-bold' : 'bg-white tex-black border-tertiary/30'}`}
               onClick={() => setSelectedStatus('all')}
             >
               All ({areas.length})
             </div>
             <div 
-              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'Completed' ? 'bg-sw-green text-white' : 'bg-white text-sw-green border-sw-green/30'}`}
+              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'Completed' ? 'sw-bg-green text-white font-weight-bold' : 'bg-white sw-text-green border-sw-green/30'}`}
               onClick={() => setSelectedStatus('Completed')}
             >
               Completed ({statusCounts['Completed']})
             </div>
             <div 
-              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'In Progress' ? 'bg-sw-blue text-white' : 'bg-white text-sw-blue border-sw-blue/30'}`}
+              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'In Progress' ? 'sw-bg-blue text-white font-weight-bold' : 'bg-white sw-text-blue border-sw-blue/30'}`}
               onClick={() => setSelectedStatus('In Progress')}
             >
               In Progress ({statusCounts['In Progress']})
             </div>
             <div 
-              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'Not Started' ? 'bg-sw-red text-white' : 'bg-white text-sw-red border-sw-red/30'}`}
+              className={`px-3 py-1 rounded-full text-sm cursor-pointer border ${selectedStatus === 'Not Started' ? 'sw-bg-red text-white font-weight-bold' : 'bg-white sw-text-red border-sw-red/30'}`}
               onClick={() => setSelectedStatus('Not Started')}
             >
               Not Started ({statusCounts['Not Started']})
@@ -1054,22 +1054,22 @@ function FocusAreasDetailContent({ details }) {
                 <div className="flex items-start justify-between">
                   <h3 className="text-lg font-bold text-primary">{area.areaTitle}</h3>
                   <span className={`px-3 py-1 rounded-full text-white text-sm ${
-                    area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                    area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                    'bg-sw-red'
+                    area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                    area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                    'sw-bg-red'
                   }`}>
                     {area.progressStatus || 'Not Started'}
                   </span>
                 </div>
                 
                 {/* Capability Framework mapping */}
-                <div className="mt-4 bg-sw-blue/5 p-3 rounded-md border border-sw-blue/20">
-                  <h4 className="text-sm font-semibold text-sw-blue">Capability Framework</h4>
+                <div className="mt-4 sw-bg-blue/5 p-3 rounded-md border border-sw-blue/20">
+                  <h4 className="text-sm font-semibold sw-text-blue">Capability Framework</h4>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    <span className="px-2 py-1 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                    <span className="px-2 py-1 sw-bg-blue/10 sw-text-blue rounded text-sm">
                       Principle {area.cfMapping.principleId}: {area.cfMapping.principleName}
                     </span>
-                    <span className="px-2 py-1 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                    <span className="px-2 py-1 sw-bg-blue/10 sw-text-blue rounded text-sm">
                       Element {area.cfMapping.elementId}: {area.cfMapping.elementName}
                     </span>
                   </div>
@@ -1103,7 +1103,7 @@ function FocusAreasDetailContent({ details }) {
                     <ul className="mt-2 space-y-2">
                       {area.actions.map((action, i) => (
                         <li key={i} className="flex items-start">
-                          <span className="text-sw-red mr-2 mt-1">•</span>
+                          <span className="sw-text-red mr-2 mt-1">•</span>
                           <span className="text-secondary">{action}</span>
                         </li>
                       ))}
@@ -1114,8 +1114,8 @@ function FocusAreasDetailContent({ details }) {
                 {/* GIP Excerpts - Highlighted */}
                 {data?.gipExcerpts && data.gipExcerpts.filter(excerpt => 
                   excerpt.areaTitle === area.areaTitle).length > 0 && (
-                  <div className="mt-6 p-4 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
-                    <h4 className="text-sm font-semibold text-sw-yellow">GIP Excerpts</h4>
+                  <div className="mt-6 p-4 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                    <h4 className="text-sm font-semibold sw-text-yellow">GIP Excerpts</h4>
                     {data.gipExcerpts
                       .filter(excerpt => excerpt.areaTitle === area.areaTitle)
                       .map((excerpt, i) => (
@@ -1213,8 +1213,8 @@ function FocusAreasDetailContent({ details }) {
               <div key={partner.id} className="bg-white p-6 rounded-lg shadow-sm">
                 {/* Partner header */}
                 <div className="flex items-center justify-between border-b border-tertiary/20 pb-4">
-                  <h3 className="text-lg font-bold text-sw-blue">{partner.name}</h3>
-                  <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full text-sm">
+                  <h3 className="text-lg font-bold sw-text-blue">{partner.name}</h3>
+                  <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full text-sm">
                     {partnerAreas.length} focus {partnerAreas.length === 1 ? 'area' : 'areas'}
                   </span>
                 </div>
@@ -1227,9 +1227,9 @@ function FocusAreasDetailContent({ details }) {
                       <div className="flex items-start justify-between">
                         <h4 className="font-semibold text-primary">{area.areaTitle}</h4>
                         <span className={`px-3 py-1 rounded-full text-white text-sm ${
-                          area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                          area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                          'bg-sw-red'
+                          area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                          area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                          'sw-bg-red'
                         }`}>
                           {area.progressStatus || 'Not Started'}
                         </span>
@@ -1237,8 +1237,8 @@ function FocusAreasDetailContent({ details }) {
                       
                       {/* CF mapping - prominently displayed */}
                       {area.cfMapping && (
-                        <div className="mt-3 bg-sw-blue/5 p-2 rounded border border-sw-blue/20">
-                          <span className="text-sm text-sw-blue">
+                        <div className="mt-3 sw-bg-blue/5 p-2 rounded border border-sw-blue/20">
+                          <span className="text-sm sw-text-blue">
                             Principle {area.cfMapping.principleId}: {area.cfMapping.principleName} • 
                             Element {area.cfMapping.elementId}: {area.cfMapping.elementName}
                           </span>
@@ -1271,7 +1271,7 @@ function FocusAreasDetailContent({ details }) {
                       {/* GIP Excerpts - if available for this partner */}
                       {partner.gipExcerpts && partner.gipExcerpts.filter(excerpt => 
                         excerpt.areaTitle === area.areaTitle).length > 0 && (
-                        <div className="mt-4 p-3 bg-sw-yellow/10 rounded border-l-4 border-sw-yellow">
+                        <div className="mt-4 p-3 sw-text-yellow/10 rounded border-l-4 border-sw-yellow">
                           <p className="text-secondary italic">
                             {partner.gipExcerpts.find(excerpt => excerpt.areaTitle === area.areaTitle).text}
                           </p>
@@ -1335,10 +1335,10 @@ function TopPrincipleDetailContent({ details }) {
       {/* Principle header */}
       <div className="bg-white rounded-lg p-5 border-l-4 border-sw-blue shadow-sm">
         <div className="flex items-center gap-3 mb-3">
-          <div className="bg-sw-blue w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl">
+          <div className="sw-bg-blue w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl">
             {principleNumber}
           </div>
-          <h3 className="text-xl font-bold text-sw-blue">
+          <h3 className="text-xl font-bold sw-text-blue">
             {principle.name}
           </h3>
         </div>
@@ -1352,16 +1352,16 @@ function TopPrincipleDetailContent({ details }) {
         
         {/* Status counts */}
         <div className="grid grid-cols-3 gap-4 mt-4">
-          <div className="bg-sw-green/10 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-green">{statusCounts.completed}</p>
+          <div className="sw-bg-green/10 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-green">{statusCounts.completed}</p>
             <p className="text-sm text-secondary">Completed</p>
           </div>
-          <div className="bg-sw-blue/10 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-blue">{statusCounts.inProgress}</p>
+          <div className="sw-bg-blue/10 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-blue">{statusCounts.inProgress}</p>
             <p className="text-sm text-secondary">In Progress</p>
           </div>
-          <div className="bg-sw-red/10 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-red">{statusCounts.notStarted}</p>
+          <div className="sw-bg-red/10 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-red">{statusCounts.notStarted}</p>
             <p className="text-sm text-secondary">Not Started</p>
           </div>
         </div>
@@ -1379,7 +1379,7 @@ function TopPrincipleDetailContent({ details }) {
           <h5 className="font-semibold text-primary mb-2">Key Elements</h5>
           <div className="flex flex-wrap gap-2">
             {getPrincipleElements(principleNumber).map((element, i) => (
-              <span key={i} className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-md text-sm">
+              <span key={i} className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-md text-sm">
                 {element}
               </span>
             ))}
@@ -1408,13 +1408,13 @@ function TopPrincipleDetailContent({ details }) {
                   <div>
                     <h5 className="font-semibold text-primary">{area.areaTitle}</h5>
                     {viewMode === 'comparison' && (
-                      <p className="text-sm text-sw-blue mt-1">{area.partnerName}</p>
+                      <p className="text-sm sw-text-blue mt-1">{area.partnerName}</p>
                     )}
                   </div>
                   <span className={`px-3 py-1 rounded-full text-white text-sm ${
-                    area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                    area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                    'bg-sw-red'
+                    area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                    area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                    'sw-bg-red'
                   }`}>
                     {area.progressStatus || 'Not Started'}
                   </span>
@@ -1424,7 +1424,7 @@ function TopPrincipleDetailContent({ details }) {
                 
                 <div className="flex items-center mt-3 text-sm">
                   <span className="text-secondary font-medium">Element:</span>
-                  <span className="ml-2 px-2 py-0.5 bg-sw-blue/10 text-sw-blue rounded">
+                  <span className="ml-2 px-2 py-0.5 sw-bg-blue/10 sw-text-blue rounded">
                     {area.cfMapping.elementId}: {area.cfMapping.elementName}
                   </span>
                 </div>
@@ -1440,7 +1440,7 @@ function TopPrincipleDetailContent({ details }) {
           <h4 className="font-bold text-primary mb-4">GIP Excerpts</h4>
           <div className="space-y-4">
             {principleExcerpts.map((excerpt, i) => (
-              <div key={i} className="p-4 bg-sw-yellow/10 rounded-lg border-l-4 border-sw-yellow">
+              <div key={i} className="p-4 sw-text-yellow/10 rounded-lg border-l-4 border-sw-yellow">
                 <p className="text-secondary italic">{excerpt.text}</p>
                 <div className="mt-2 text-sm text-secondary">
                   <span className="font-medium">From:</span> {excerpt.areaTitle} / {excerpt.section}
@@ -1718,9 +1718,9 @@ function SupportRequestsDetailContent({ details }) {
               return (
                 <div key={type} className="border border-tertiary/20 rounded-lg overflow-hidden">
                   {/* Type header */}
-                  <div className="bg-sw-blue/5 p-3 border-b border-tertiary/20 flex justify-between items-center">
-                    <h5 className="font-semibold text-sw-blue">{type}</h5>
-                    <div className="px-3 py-1 bg-sw-blue text-white rounded-full text-sm">
+                  <div className="sw-bg-blue/5 p-3 border-b border-tertiary/20 flex justify-between items-center">
+                    <h5 className="font-semibold sw-text-blue">{type}</h5>
+                    <div className="px-3 py-1 sw-bg-blue text-white rounded-full text-sm">
                       {typeRequests.length} {typeRequests.length === 1 ? 'request' : 'requests'}
                     </div>
                   </div>
@@ -1732,7 +1732,7 @@ function SupportRequestsDetailContent({ details }) {
                         {/* Partner info for comparison view */}
                         {viewMode === 'comparison' && (
                           <div className="mb-2">
-                            <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-md text-sm">
+                            <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-md text-sm">
                               {request.partnerName}
                             </span>
                           </div>
@@ -1761,7 +1761,7 @@ function SupportRequestsDetailContent({ details }) {
                         
                         {/* GIP excerpt */}
                         {request.gipExcerpt && (
-                          <div className="mt-3 p-3 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                          <div className="mt-3 p-3 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
                             <p className="text-secondary italic text-sm">{request.gipExcerpt}</p>
                           </div>
                         )}
@@ -1785,13 +1785,13 @@ function SupportRequestsDetailContent({ details }) {
               key={id} 
               className={`p-3 rounded-lg border text-center cursor-pointer ${
                 selectedQuarter === id 
-                  ? 'border-sw-blue bg-sw-blue/5' 
+                  ? 'border-sw-blue sw-bg-blue/5' 
                   : 'border-tertiary/20 hover:border-sw-blue/30'
               }`}
               onClick={() => setSelectedQuarter(selectedQuarter === id ? 'all' : id)}
             >
               <h5 className="font-medium text-primary mb-1">{quarter.name}</h5>
-              <p className="text-2xl font-bold text-sw-blue">{quarter.requests.length}</p>
+              <p className="text-2xl font-bold sw-text-blue">{quarter.requests.length}</p>
               <p className="text-sm text-secondary mt-1">
                 {quarter.requests.length === 1 ? 'Request' : 'Requests'}
               </p>
@@ -1977,7 +1977,7 @@ function PrincipleDistributionDetailContent({ details }) {
     <div className="space-y-6">
       {/* Header with overview */}
       <div className="bg-white p-5 rounded-lg border-l-4 border-sw-blue shadow-sm">
-        <h3 className="text-xl font-bold text-sw-blue">
+        <h3 className="text-xl font-bold sw-text-blue">
           Principle Distribution Analysis
         </h3>
         <p className="text-secondary mt-1">
@@ -1994,7 +1994,7 @@ function PrincipleDistributionDetailContent({ details }) {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-sw-blue/5 border-b-2 border-sw-blue/20">
+              <tr className="sw-bg-blue/5 border-b-2 border-sw-blue/20">
                 <th className="py-3 px-4 text-left text-sm font-bold text-primary">Principle</th>
                 <th className="py-3 px-4 text-center text-sm font-bold text-primary">Focus Areas</th>
                 <th className="py-3 px-4 text-center text-sm font-bold text-primary">Percentage</th>
@@ -2009,7 +2009,7 @@ function PrincipleDistributionDetailContent({ details }) {
                 <tr 
                   key={index} 
                   className={`border-b border-tertiary/10 hover:bg-tertiary/5 cursor-pointer ${
-                    selectedPrinciple === item.principle ? 'bg-sw-blue/5' : ''
+                    selectedPrinciple === item.principle ? 'sw-bg-blue/5' : ''
                   }`}
                   onClick={() => setSelectedPrinciple(
                     selectedPrinciple === item.principle ? null : item.principle
@@ -2030,7 +2030,7 @@ function PrincipleDistributionDetailContent({ details }) {
                     <div className="flex items-center justify-center">
                       <div className="w-full max-w-[100px] bg-tertiary/10 h-3 rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-sw-blue" 
+                          className="h-full sw-bg-blue" 
                           style={{ width: `${item.percentage}%` }}
                         ></div>
                       </div>
@@ -2041,13 +2041,13 @@ function PrincipleDistributionDetailContent({ details }) {
                   </td>
                   {viewMode === 'comparison' && (
                     <td className="py-3 px-4 text-center">
-                      <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full">
+                      <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full">
                         {partnersByPrinciple[item.principle]?.length || 0}
                       </span>
                     </td>
                   )}
                   <td className="py-3 px-4 text-center">
-                    <button className="p-1 rounded-full text-sw-blue hover:bg-sw-blue/10">
+                    <button className="p-1 rounded-full sw-text-blue hover:sw-bg-blue/10">
                       {selectedPrinciple === item.principle ? (
                         <ChevronUp size={18} />
                       ) : (
@@ -2070,7 +2070,7 @@ function PrincipleDistributionDetailContent({ details }) {
               Principle {selectedPrinciple} Details
             </h4>
             <button 
-              className="text-sm text-sw-blue hover:underline"
+              className="text-sm sw-text-blue hover:underline"
               onClick={() => setSelectedPrinciple(null)}
             >
               Close
@@ -2078,7 +2078,7 @@ function PrincipleDistributionDetailContent({ details }) {
           </div>
           
           {/* Principle description */}
-          <div className="p-4 bg-sw-blue/5 rounded-lg mb-4">
+          <div className="p-4 sw-bg-blue/5 rounded-lg mb-4">
             <p className="text-secondary">
               {getPrincipleDescription(selectedPrinciple.toString())}
             </p>
@@ -2089,7 +2089,7 @@ function PrincipleDistributionDetailContent({ details }) {
             <h5 className="font-semibold text-primary mb-2">Key Elements</h5>
             <div className="flex flex-wrap gap-2">
               {getPrincipleElements(selectedPrinciple.toString()).map((element, i) => (
-                <div key={i} className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-lg text-sm">
+                <div key={i} className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-lg text-sm">
                   {element}
                 </div>
               ))}
@@ -2104,8 +2104,8 @@ function PrincipleDistributionDetailContent({ details }) {
                 {partnersByPrinciple[selectedPrinciple].map((partner, i) => (
                   <div key={i} className="p-4 border border-tertiary/20 rounded-lg">
                     <div className="flex justify-between items-start">
-                      <h6 className="font-medium text-sw-blue">{partner.partnerName}</h6>
-                      <span className="px-2 py-0.5 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                      <h6 className="font-medium sw-text-blue">{partner.partnerName}</h6>
+                      <span className="px-2 py-0.5 sw-bg-blue/10 sw-text-blue rounded text-sm">
                         {partner.focusAreaCount} area{partner.focusAreaCount !== 1 ? 's' : ''}
                       </span>
                     </div>
@@ -2115,9 +2115,9 @@ function PrincipleDistributionDetailContent({ details }) {
                       <div className="mt-2 text-sm">
                         <span className="text-secondary font-medium">Status:</span>
                         <span className={`ml-2 ${
-                          partner.status === 'Completed' ? 'text-sw-green' :
-                          partner.status === 'In Progress' ? 'text-sw-blue' :
-                          'text-sw-red'
+                          partner.status === 'Completed' ? 'sw-text-green' :
+                          partner.status === 'In Progress' ? 'sw-text-blue' :
+                          'sw-text-red'
                         }`}>
                           {partner.status}
                         </span>
@@ -2132,7 +2132,7 @@ function PrincipleDistributionDetailContent({ details }) {
                         </div>
                         <div className="w-full bg-tertiary/10 h-2 rounded-full overflow-hidden">
                           <div 
-                            className="h-full bg-sw-blue" 
+                            className="h-full sw-bg-blue" 
                             style={{ width: `${partner.percentage}%` }}
                           ></div>
                         </div>
@@ -2173,7 +2173,7 @@ function PrincipleDistributionDetailContent({ details }) {
                       excerpt.cfMapping.principleId === selectedPrinciple && 
                       excerpt.cfMapping.elementId === element.split(' ')[0]
                     ).map((excerpt, j) => (
-                      <div key={j} className="mt-2 p-3 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                      <div key={j} className="mt-2 p-3 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
                         <p className="text-secondary italic text-sm">{excerpt.text}</p>
                       </div>
                     ))}
@@ -2426,7 +2426,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
       <div className="space-y-6">
         {/* Overview header */}
         <div className="bg-white p-5 rounded-lg border-l-4 border-sw-blue shadow-sm">
-          <h3 className="text-xl font-bold text-sw-blue">
+          <h3 className="text-xl font-bold sw-text-blue">
             Development Areas for {data?.name || 'Partner'}
           </h3>
           <p className="text-secondary mt-1">
@@ -2436,21 +2436,21 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
           {/* Status summary */}
           <div className="grid grid-cols-3 gap-4 mt-4">
             <div className={`p-3 rounded-lg text-center cursor-pointer ${
-              selectedStatus === 'Completed' ? 'bg-sw-green/20 border border-sw-green' : 'bg-sw-green/5'
+              selectedStatus === 'Completed' ? 'sw-bg-green/20 border border-sw-green' : 'sw-bg-green/5'
             }`} onClick={() => setSelectedStatus(selectedStatus === 'Completed' ? 'all' : 'Completed')}>
-              <p className="text-xl font-bold text-sw-green">{statusGroups['Completed'].length}</p>
+              <p className="text-xl font-bold sw-text-green">{statusGroups['Completed'].length}</p>
               <p className="text-sm text-secondary">Completed</p>
             </div>
             <div className={`p-3 rounded-lg text-center cursor-pointer ${
-              selectedStatus === 'In Progress' ? 'bg-sw-blue/20 border border-sw-blue' : 'bg-sw-blue/5'
+              selectedStatus === 'In Progress' ? 'sw-bg-blue/20 border border-sw-blue' : 'sw-bg-blue/5'
             }`} onClick={() => setSelectedStatus(selectedStatus === 'In Progress' ? 'all' : 'In Progress')}>
-              <p className="text-xl font-bold text-sw-blue">{statusGroups['In Progress'].length}</p>
+              <p className="text-xl font-bold sw-text-blue">{statusGroups['In Progress'].length}</p>
               <p className="text-sm text-secondary">In Progress</p>
             </div>
             <div className={`p-3 rounded-lg text-center cursor-pointer ${
-              selectedStatus === 'Not Started' ? 'bg-sw-red/20 border border-sw-red' : 'bg-sw-red/5'
+              selectedStatus === 'Not Started' ? 'sw-bg-red/20 border border-sw-red' : 'sw-bg-red/5'
             }`} onClick={() => setSelectedStatus(selectedStatus === 'Not Started' ? 'all' : 'Not Started')}>
-              <p className="text-xl font-bold text-sw-red">{statusGroups['Not Started'].length}</p>
+              <p className="text-xl font-bold sw-text-red">{statusGroups['Not Started'].length}</p>
               <p className="text-sm text-secondary">Not Started</p>
             </div>
           </div>
@@ -2462,7 +2462,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
             <h4 className="font-semibold text-primary">Filters</h4>
             {(selectedStatus !== 'all' || selectedPrinciple !== 'all') && (
               <button 
-                className="text-sm text-sw-blue hover:underline"
+                className="text-sm sw-text-blue hover:underline"
                 onClick={() => {
                   setSelectedStatus('all');
                   setSelectedPrinciple('all');
@@ -2495,7 +2495,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
         <div className="bg-white p-5 rounded-lg shadow-sm">
           <div className="flex justify-between items-center mb-4">
             <h4 className="font-bold text-primary">Development Areas</h4>
-            <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full text-sm">
+            <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full text-sm">
               {filteredAreas.length} of {areas.length}
             </span>
           </div>
@@ -2511,9 +2511,9 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                   <div className="flex justify-between items-start mb-2">
                     <h5 className="font-semibold text-primary">{area.areaTitle}</h5>
                     <span className={`px-3 py-1 rounded-full text-white text-sm ${
-                      area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                      area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                      'bg-sw-red'
+                      area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                      area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                      'sw-bg-red'
                     }`}>
                       {area.progressStatus || 'Not Started'}
                     </span>
@@ -2522,9 +2522,9 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                   <p className="text-secondary mb-3">{area.objective}</p>
                   
                   {/* CF mapping */}
-                  <div className="p-3 bg-sw-blue/5 rounded-md mb-3">
+                  <div className="p-3 sw-bg-blue/5 rounded-md mb-3">
                     <div className="flex items-center">
-                      <span className="text-sm font-medium text-sw-blue">Capability Framework:</span>
+                      <span className="text-sm font-medium sw-text-blue">Capability Framework:</span>
                       <span className="ml-2 text-sm text-secondary">
                         Principle {area.cfMapping.principleId}: {area.cfMapping.principleName}
                       </span>
@@ -2536,12 +2536,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                   
                   {/* Implementation details */}
                   <div className="grid grid-cols-2 gap-3 mb-3">
-                    <div className="p-2 bg-tertiary/5 rounded-md">
-                      <p className="text-sm font-medium text-secondary">Timeline</p>
-                      <p className="text-sm text-secondary">
-                        {formatDate(area.startDate)} - {formatDate(area.endDate)}
-                      </p>
-                    </div>
+                
                     <div className="p-2 bg-tertiary/5 rounded-md">
                       <p className="text-sm font-medium text-secondary">Lead Person</p>
                       <p className="text-sm text-secondary">{area.leadPerson}</p>
@@ -2550,8 +2545,8 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                   
                   {/* GIP excerpts */}
                   {data?.gipExcerpts?.some(e => e.areaTitle === area.areaTitle) && (
-                    <div className="p-3 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
-                      <p className="text-sm font-medium text-sw-yellow mb-1">From GIP</p>
+                    <div className="p-3 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                      <p className="text-sm font-medium sw-text-yellow mb-1">From GIP</p>
                       <p className="text-sm text-secondary italic">
                         {data.gipExcerpts.find(e => e.areaTitle === area.areaTitle)?.text}
                       </p>
@@ -2606,7 +2601,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
             <h4 className="font-semibold text-primary">Principle Filters</h4>
             {selectedPrinciple !== 'all' && (
               <button 
-                className="text-sm text-sw-blue hover:underline"
+                className="text-sm sw-text-blue hover:underline"
                 onClick={() => setSelectedPrinciple('all')}
               >
                 Clear
@@ -2638,7 +2633,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
           <div className="overflow-x-auto">
             <table className="min-w-full border-collapse">
               <thead>
-                <tr className="bg-sw-blue/5 border-b-2 border-sw-blue/20">
+                <tr className="sw-bg-blue/5 border-b-2 border-sw-blue/20">
                   <th className="py-3 px-4 text-left text-sm font-bold text-primary">Number of Areas</th>
                   <th className="py-3 px-4 text-center text-sm font-bold text-primary">Partners</th>
                   <th className="py-3 px-4 text-center text-sm font-bold text-primary">Completed</th>
@@ -2659,7 +2654,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                     <tr 
                       key={index} 
                       className={`border-b border-tertiary/10 hover:bg-tertiary/5 cursor-pointer ${
-                        selectedDistribution === item.areaCount ? 'bg-sw-blue/5' : ''
+                        selectedDistribution === item.areaCount ? 'sw-bg-blue/5' : ''
                       }`}
                       onClick={() => setSelectedDistribution(
                         selectedDistribution === item.areaCount ? null : item.areaCount
@@ -2669,27 +2664,27 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                         <span className="font-medium text-primary">{item.areaCount} Areas</span>
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full">
+                        <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full">
                           {item.partnerCount}
                         </span>
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <span className="text-sw-green font-medium">
+                        <span className="sw-text-green font-medium">
                           {item.statusTotals.completed}
                         </span>
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <span className="text-sw-blue font-medium">
+                        <span className="sw-text-blue font-medium">
                           {item.statusTotals.inProgress}
                         </span>
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <span className="text-sw-red font-medium">
+                        <span className="sw-text-red font-medium">
                           {item.statusTotals.notStarted}
                         </span>
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <button className="p-1 rounded-full text-sw-blue hover:bg-sw-blue/10">
+                        <button className="p-1 rounded-full sw-text-blue hover:sw-bg-blue/10">
                           {selectedDistribution === item.areaCount ? (
                             <ChevronUp size={18} />
                           ) : (
@@ -2713,7 +2708,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                 Partners with {selectedDistribution} Focus Areas
               </h4>
               <button 
-                className="text-sm text-sw-blue hover:underline"
+                className="text-sm sw-text-blue hover:underline"
                 onClick={() => setSelectedDistribution(null)}
               >
                 Close
@@ -2725,17 +2720,17 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                 .find(d => d.areaCount === selectedDistribution)
                 ?.partners.map((partner, partnerIndex) => (
                   <div key={partnerIndex} className="border border-tertiary/20 rounded-lg overflow-hidden">
-                    <div className="bg-sw-blue/5 p-3 border-b border-tertiary/20">
+                    <div className="sw-bg-blue/5 p-3 border-b border-tertiary/20">
                       <div className="flex justify-between items-center">
-                        <h5 className="font-semibold text-sw-blue">{partner.partnerName}</h5>
+                        <h5 className="font-semibold sw-text-blue">{partner.partnerName}</h5>
                         <div className="flex items-center space-x-2 text-xs">
-                          <span className="px-2 py-0.5 bg-sw-green/10 text-sw-green rounded">
+                          <span className="px-2 py-0.5 sw-bg-green/10 sw-text-green rounded">
                             {partner.statusBreakdown.completed} Completed
                           </span>
-                          <span className="px-2 py-0.5 bg-sw-blue/10 text-sw-blue rounded">
+                          <span className="px-2 py-0.5 sw-bg-blue/10 sw-text-blue rounded">
                             {partner.statusBreakdown.inProgress} In Progress
                           </span>
-                          <span className="px-2 py-0.5 bg-sw-red/10 text-sw-red rounded">
+                          <span className="px-2 py-0.5 sw-bg-red/10 sw-text-red rounded">
                             {partner.statusBreakdown.notStarted} Not Started
                           </span>
                         </div>
@@ -2751,15 +2746,15 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                               
                               {/* CF mapping */}
                               {area.cfMapping && (
-                                <div className="mt-1 text-sm text-sw-blue">
+                                <div className="mt-1 text-sm sw-text-blue">
                                   Principle {area.cfMapping.principleId}: {area.cfMapping.elementName || area.cfMapping.principleName}
                                 </div>
                               )}
                             </div>
                             <span className={`px-2 py-0.5 rounded-full text-white text-xs ${
-                              area.status === 'Completed' ? 'bg-sw-green' :
-                              area.status === 'In Progress' ? 'bg-sw-blue' :
-                              'bg-sw-red'
+                              area.status === 'Completed' ? 'sw-bg-green' :
+                              area.status === 'In Progress' ? 'sw-bg-blue' :
+                              'sw-bg-red'
                             }`}>
                               {area.status || 'Not Started'}
                             </span>
@@ -2777,7 +2772,7 @@ function DevelopmentAreaDistributionDetailContent({ details }) {
                             if (!excerpt) return null;
                             
                             return (
-                              <div className="mt-2 p-2 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                              <div className="mt-2 p-2 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
                                 <p className="text-xs text-secondary italic">{excerpt.text}</p>
                               </div>
                             );
@@ -2838,7 +2833,7 @@ function DevelopmentAreasDetailContent({ details }) {
       <div className="space-y-6">
         {/* Header with overview stats */}
         <div className="bg-white rounded-lg p-5 border-l-4 border-sw-blue shadow-sm">
-          <h3 className="text-xl font-bold text-sw-blue">
+          <h3 className="text-xl font-bold sw-text-blue">
             {data?.name || 'Partner'} Development Areas
           </h3>
           <p className="text-secondary mt-1">
@@ -2847,21 +2842,21 @@ function DevelopmentAreasDetailContent({ details }) {
           
           <div className="grid grid-cols-3 gap-4 mt-4">
             <div className={`p-3 rounded-lg text-center cursor-pointer ${
-              selectedStatus === 'Completed' ? 'bg-sw-green/20 border border-sw-green' : 'bg-sw-green/5'
+              selectedStatus === 'Completed' ? 'sw-bg-green/20 border border-sw-green' : 'sw-bg-green/5'
             }`} onClick={() => setSelectedStatus(selectedStatus === 'Completed' ? 'all' : 'Completed')}>
-              <p className="text-xl font-bold text-sw-green">{statusCounts['Completed']}</p>
+              <p className="text-xl font-bold sw-text-green">{statusCounts['Completed']}</p>
               <p className="text-sm text-secondary">Completed</p>
             </div>
             <div className={`p-3 rounded-lg text-center cursor-pointer ${
-              selectedStatus === 'In Progress' ? 'bg-sw-blue/20 border border-sw-blue' : 'bg-sw-blue/5'
+              selectedStatus === 'In Progress' ? 'sw-bg-blue/20 border border-sw-blue' : 'sw-bg-blue/5'
             }`} onClick={() => setSelectedStatus(selectedStatus === 'In Progress' ? 'all' : 'In Progress')}>
-              <p className="text-xl font-bold text-sw-blue">{statusCounts['In Progress']}</p>
+              <p className="text-xl font-bold sw-text-blue">{statusCounts['In Progress']}</p>
               <p className="text-sm text-secondary">In Progress</p>
             </div>
             <div className={`p-3 rounded-lg text-center cursor-pointer ${
-              selectedStatus === 'Not Started' ? 'bg-sw-red/20 border border-sw-red' : 'bg-sw-red/5'
+              selectedStatus === 'Not Started' ? 'sw-bg-red/20 border border-sw-red' : 'sw-bg-red/5'
             }`} onClick={() => setSelectedStatus(selectedStatus === 'Not Started' ? 'all' : 'Not Started')}>
-              <p className="text-xl font-bold text-sw-red">{statusCounts['Not Started']}</p>
+              <p className="text-xl font-bold sw-text-red">{statusCounts['Not Started']}</p>
               <p className="text-sm text-secondary">Not Started</p>
             </div>
           </div>
@@ -2873,7 +2868,7 @@ function DevelopmentAreasDetailContent({ details }) {
             <h4 className="font-semibold text-primary">Filters</h4>
             {(selectedPrinciple !== 'all' || selectedStatus !== 'all') && (
               <button 
-                className="text-sm text-sw-blue hover:underline"
+                className="text-sm sw-text-blue hover:underline"
                 onClick={() => {
                   setSelectedPrinciple('all');
                   setSelectedStatus('all');
@@ -2905,7 +2900,7 @@ function DevelopmentAreasDetailContent({ details }) {
         <div className="bg-white p-5 rounded-lg shadow-sm">
           <div className="flex justify-between items-center mb-4">
             <h4 className="font-bold text-primary">Development Areas</h4>
-            <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full text-sm">
+            <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full text-sm">
               {filteredAreas.length} of {areas.length}
             </span>
           </div>
@@ -2923,9 +2918,9 @@ function DevelopmentAreasDetailContent({ details }) {
                     <div className="flex justify-between items-start">
                       <h5 className="font-semibold text-primary text-lg">{area.areaTitle}</h5>
                       <span className={`px-3 py-1 rounded-full text-white text-sm ${
-                        area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                        area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                        'bg-sw-red'
+                        area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                        area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                        'sw-bg-red'
                       }`}>
                         {area.progressStatus || 'Not Started'}
                       </span>
@@ -2934,13 +2929,13 @@ function DevelopmentAreasDetailContent({ details }) {
                   
                   <div className="p-4">
                     {/* CF Mapping - prominently displayed */}
-                    <div className="p-3 bg-sw-blue/5 rounded-md mb-4 border border-sw-blue/20">
-                      <h6 className="text-sm font-semibold text-sw-blue mb-1">Capability Framework Mapping</h6>
+                    <div className="p-3 sw-bg-blue/5 rounded-md mb-4 border border-sw-blue/20">
+                      <h6 className="text-sm font-semibold sw-text-blue mb-1">Capability Framework Mapping</h6>
                       <div className="flex flex-wrap gap-2">
-                        <span className="px-2 py-1 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                        <span className="px-2 py-1 sw-bg-blue/10 sw-text-blue rounded text-sm">
                           Principle {area.cfMapping.principleId}: {area.cfMapping.principleName}
                         </span>
-                        <span className="px-2 py-1 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                        <span className="px-2 py-1 sw-bg-blue/10 sw-text-blue rounded text-sm">
                           Element {area.cfMapping.elementId}: {area.cfMapping.elementName}
                         </span>
                       </div>
@@ -2954,21 +2949,7 @@ function DevelopmentAreasDetailContent({ details }) {
                     
                     {/* Implementation details */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                      <div>
-                        <h6 className="text-sm font-semibold text-primary mb-1">Timeline</h6>
-                        <div className="p-3 bg-tertiary/5 rounded-md">
-                          <div className="flex justify-between mb-1">
-                            <span className="text-sm text-secondary">{formatDate(area.startDate)}</span>
-                            <span className="text-sm text-secondary">{formatDate(area.endDate)}</span>
-                          </div>
-                          <div className="w-full h-2 bg-tertiary/10 rounded-full overflow-hidden">
-                            <div className="h-full bg-sw-blue" style={{ 
-                              width: `${calculateProgress(area.startDate, area.endDate)}%` 
-                            }}></div>
-                          </div>
-                          <p className="text-sm text-secondary mt-2">{area.timeframe}</p>
-                        </div>
-                      </div>
+                      
                       <div>
                         <h6 className="text-sm font-semibold text-primary mb-1">Lead Person</h6>
                         <div className="p-3 bg-tertiary/5 rounded-md">
@@ -2984,7 +2965,7 @@ function DevelopmentAreasDetailContent({ details }) {
                         <ul className="space-y-2 bg-tertiary/5 p-3 rounded-md">
                           {area.actions.map((action, i) => (
                             <li key={i} className="flex items-start">
-                              <span className="text-sw-red flex-shrink-0 mr-2">•</span>
+                              <span className="sw-text-red flex-shrink-0 mr-2">•</span>
                               <span className="text-secondary">{action}</span>
                             </li>
                           ))}
@@ -2995,8 +2976,8 @@ function DevelopmentAreasDetailContent({ details }) {
                     {/* GIP Excerpts - Highlighted to be prominent */}
                     {data?.gipExcerpts && data.gipExcerpts.filter(excerpt => 
                       excerpt.areaTitle === area.areaTitle).length > 0 && (
-                      <div className="p-4 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
-                        <h6 className="text-sm font-semibold text-sw-yellow mb-2">GIP Excerpts</h6>
+                      <div className="p-4 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                        <h6 className="text-sm font-semibold sw-text-yellow mb-2">GIP Excerpts</h6>
                         {data.gipExcerpts
                           .filter(excerpt => excerpt.areaTitle === area.areaTitle)
                           .map((excerpt, i) => (
@@ -3048,7 +3029,7 @@ function DevelopmentAreasDetailContent({ details }) {
       <div className="space-y-6">
         {/* Header with overview */}
         <div className="bg-white rounded-lg p-5 border-l-4 border-sw-blue shadow-sm">
-          <h3 className="text-xl font-bold text-sw-blue">
+          <h3 className="text-xl font-bold sw-text-blue">
             Common Development Areas
           </h3>
           <p className="text-secondary mt-1">
@@ -3057,20 +3038,20 @@ function DevelopmentAreasDetailContent({ details }) {
           
           {/* Summary statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-            <div className="p-3 bg-sw-blue/5 rounded-lg text-center">
-              <p className="text-xl font-bold text-sw-blue">
+            <div className="p-3 sw-bg-blue/5 rounded-lg text-center">
+              <p className="text-xl font-bold sw-text-blue">
                 {commonAreas.filter(a => a.partnerCount > 1).length}
               </p>
               <p className="text-sm text-secondary">Shared Areas</p>
             </div>
-            <div className="p-3 bg-sw-blue/5 rounded-lg text-center">
-              <p className="text-xl font-bold text-sw-blue">
+            <div className="p-3 sw-bg-blue/5 rounded-lg text-center">
+              <p className="text-xl font-bold sw-text-blue">
                 {commonAreas.filter(a => a.partnerCount === 1).length}
               </p>
               <p className="text-sm text-secondary">Unique Areas</p>
             </div>
-            <div className="p-3 bg-sw-blue/5 rounded-lg text-center">
-              <p className="text-xl font-bold text-sw-blue">
+            <div className="p-3 sw-bg-blue/5 rounded-lg text-center">
+              <p className="text-xl font-bold sw-text-blue">
                 {Math.max(...commonAreas.map(a => a.partnerCount), 0)}
               </p>
               <p className="text-sm text-secondary">Most Common Area Count</p>
@@ -3084,7 +3065,7 @@ function DevelopmentAreasDetailContent({ details }) {
             <h4 className="font-semibold text-primary">Filters</h4>
             {selectedPrinciple !== 'all' && (
               <button 
-                className="text-sm text-sw-blue hover:underline"
+                className="text-sm sw-text-blue hover:underline"
                 onClick={() => setSelectedPrinciple('all')}
               >
                 Clear
@@ -3129,7 +3110,7 @@ function DevelopmentAreasDetailContent({ details }) {
         <div className="bg-white p-5 rounded-lg shadow-sm">
           <div className="flex justify-between items-center mb-4">
             <h4 className="font-bold text-primary">Development Areas</h4>
-            <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full text-sm">
+            <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full text-sm">
               {filteredAreas.length} of {commonAreas.length}
             </span>
           </div>
@@ -3150,16 +3131,16 @@ function DevelopmentAreasDetailContent({ details }) {
                     <div>
                       <h5 className="font-semibold text-primary">{area.title}</h5>
                       {area.cfMapping && (
-                        <p className="text-sm text-sw-blue mt-1">
+                        <p className="text-sm sw-text-blue mt-1">
                           Principle {area.cfMapping.principleId}: {area.cfMapping.principleName}
                         </p>
                       )}
                     </div>
                     <div className="flex items-center">
-                      <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full text-sm mr-3">
+                      <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full text-sm mr-3">
                         {area.partnerCount} {area.partnerCount === 1 ? 'partner' : 'partners'}
                       </span>
-                      <button className="p-1 rounded-full text-sw-blue hover:bg-sw-blue/10">
+                      <button className="p-1 rounded-full sw-text-blue hover:sw-bg-blue/10">
                         {expandedArea === index ? (
                           <ChevronUp size={18} />
                         ) : (
@@ -3180,14 +3161,14 @@ function DevelopmentAreasDetailContent({ details }) {
                       
                       {/* CF mapping if available */}
                       {area.cfMapping && (
-                        <div className="p-3 bg-sw-blue/5 rounded-md mb-4 border border-sw-blue/20">
-                          <h6 className="text-sm font-semibold text-sw-blue mb-1">Capability Framework</h6>
+                        <div className="p-3 sw-bg-blue/5 rounded-md mb-4 border border-sw-blue/20">
+                          <h6 className="text-sm font-semibold sw-text-blue mb-1">Capability Framework</h6>
                           <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                            <span className="px-2 py-1 sw-bg-blue/10 sw-text-blue rounded text-sm">
                               Principle {area.cfMapping.principleId}: {area.cfMapping.principleName}
                             </span>
                             {area.cfMapping.elementId && (
-                              <span className="px-2 py-1 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                              <span className="px-2 py-1 sw-bg-blue/10 sw-text-blue rounded text-sm">
                                 Element {area.cfMapping.elementId}: {area.cfMapping.elementName}
                               </span>
                             )}
@@ -3215,9 +3196,9 @@ function DevelopmentAreasDetailContent({ details }) {
                                   <h6 className="font-medium text-primary">{partnerName}</h6>
                                   {partnerArea && (
                                     <span className={`px-2 py-0.5 rounded-full text-white text-xs ${
-                                      partnerArea.progressStatus === 'Completed' ? 'bg-sw-green' :
-                                      partnerArea.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                                      'bg-sw-red'
+                                      partnerArea.progressStatus === 'Completed' ? 'sw-bg-green' :
+                                      partnerArea.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                                      'sw-bg-red'
                                     }`}>
                                       {partnerArea.progressStatus || 'Not Started'}
                                     </span>
@@ -3241,7 +3222,7 @@ function DevelopmentAreasDetailContent({ details }) {
                                     
                                     {/* GIP excerpt */}
                                     {partnerData.gipExcerpts?.some(e => e.areaTitle === partnerArea.areaTitle) && (
-                                      <div className="mt-2 p-2 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                                      <div className="mt-2 p-2 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
                                         <p className="text-xs text-secondary italic">
                                           {partnerData.gipExcerpts.find(e => e.areaTitle === partnerArea.areaTitle)?.text}
                                         </p>
@@ -3468,23 +3449,23 @@ function SingleDevelopmentAreaDetailContent({ details }) {
       <div className="bg-white rounded-lg p-5 border-l-4 border-sw-blue shadow-sm">
         <div className="flex justify-between items-start">
           <div>
-            <span className="text-sm bg-sw-blue/10 text-sw-blue rounded-md px-2 py-1">
+            <span className="text-sm sw-bg-blue/10 sw-text-blue rounded-md px-2 py-1">
               {data?.name || 'Partner'}
             </span>
             <h3 className="text-xl font-bold text-primary mt-2">{area?.areaTitle}</h3>
           </div>
           <span className={`px-3 py-1 text-white rounded-full ${
-            area.progressStatus === 'Completed' ? 'bg-sw-green' :
-            area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-            'bg-sw-red'
+            area.progressStatus === 'Completed' ? 'sw-bg-green' :
+            area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+            'sw-bg-red'
           }`}>
             {area.progressStatus || 'Not Started'}
           </span>
         </div>
         
         {/* Capability Framework mapping - Prominently displayed */}
-        <div className="mt-4 p-3 bg-sw-blue/5 rounded-md border border-sw-blue/20">
-          <h4 className="text-sm font-semibold text-sw-blue">Capability Framework Mapping</h4>
+        <div className="mt-4 p-3 sw-bg-blue/5 rounded-md border border-sw-blue/20">
+          <h4 className="text-sm font-semibold sw-text-blue">Capability Framework Mapping</h4>
           <div className="mt-2">
             <div className="text-secondary">
               <span className="font-medium">Principle {area.cfMapping.principleId}:</span> {area.cfMapping.principleName}
@@ -3502,7 +3483,7 @@ function SingleDevelopmentAreaDetailContent({ details }) {
           <h4 className="font-bold text-primary mb-3">GIP Excerpts</h4>
           <div className="space-y-4">
             {relatedExcerpts.map((excerpt, i) => (
-              <div key={i} className="p-4 bg-sw-yellow/10 rounded-md">
+              <div key={i} className="p-4 sw-text-yellow/10 rounded-md">
                 <p className="text-secondary italic">&quot;{excerpt.text}&quot;</p>
                 <div className="flex justify-between items-center mt-2 text-sm">
                   <div className="text-secondary">
@@ -3546,9 +3527,9 @@ function SingleDevelopmentAreaDetailContent({ details }) {
               <div className="w-full bg-tertiary/20 h-2.5 rounded-full mr-2">
                 <div 
                   className={`h-full rounded-full ${
-                    area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                    area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                    'bg-sw-red'
+                    area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                    area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                    'sw-bg-red'
                   }`}
                   style={{ width: `${area.completionPercentage || 0}%` }}
                 ></div>
@@ -3566,7 +3547,7 @@ function SingleDevelopmentAreaDetailContent({ details }) {
           <ul className="space-y-3">
             {area.actions.map((action, i) => (
               <li key={i} className="flex items-start p-3 bg-tertiary/5 rounded-lg">
-                <div className="w-6 h-6 bg-sw-red text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                <div className="w-6 h-6 sw-bg-red text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                   {i + 1}
                 </div>
                 <span className="text-secondary">{action}</span>
@@ -3588,8 +3569,8 @@ function SingleDevelopmentAreaDetailContent({ details }) {
               <div key={i} className="mb-6 relative">
                 {/* Timeline dot */}
                 <div className={`absolute left-[-8px] top-1.5 w-4 h-4 rounded-full border-2 ${
-                  activity.status === 'Completed' ? 'bg-sw-green border-sw-green' :
-                  activity.status === 'In Progress' ? 'bg-sw-blue border-sw-blue' :
+                  activity.status === 'Completed' ? 'sw-bg-green border-sw-green' :
+                  activity.status === 'In Progress' ? 'sw-bg-blue border-sw-blue' :
                   'bg-white border-sw-red'
                 }`}></div>
                 
@@ -3601,15 +3582,15 @@ function SingleDevelopmentAreaDetailContent({ details }) {
                   
                   <div className="mt-2 flex flex-wrap gap-2">
                     <span className={`text-xs px-2 py-0.5 rounded-full ${
-                      activity.status === 'Completed' ? 'bg-sw-green/10 text-sw-green' :
-                      activity.status === 'In Progress' ? 'bg-sw-blue/10 text-sw-blue' :
-                      'bg-sw-red/10 text-sw-red'
+                      activity.status === 'Completed' ? 'sw-bg-green/10 sw-text-green' :
+                      activity.status === 'In Progress' ? 'sw-bg-blue/10 sw-text-blue' :
+                      'sw-bg-red/10 sw-text-red'
                     }`}>
                       {activity.status || 'Not Started'} ({activity.statusPercentage || 0}%)
                     </span>
                     
                     {activity.milestone && (
-                      <span className="text-xs px-2 py-0.5 bg-sw-yellow/10 text-sw-yellow rounded-full">
+                      <span className="text-xs px-2 py-0.5 sw-text-yellow/10 sw-text-yellow rounded-full">
                         Milestone: {activity.milestone}
                       </span>
                     )}
@@ -3638,7 +3619,7 @@ function SingleDevelopmentAreaDetailContent({ details }) {
                 <p className="text-secondary mt-2">{support.context}</p>
                 
                 {support.gipExcerpt && (
-                  <div className="mt-3 p-3 bg-sw-yellow/10 rounded-md border-l-3 border-sw-yellow">
+                  <div className="mt-3 p-3 sw-text-yellow/10 rounded-md border-l-3 border-sw-yellow">
                     <p className="text-secondary italic text-sm">&quot;{support.gipExcerpt}&quot;</p>
                   </div>
                 )}
@@ -3710,7 +3691,7 @@ function CommonDevelopmentAreaDetailContent({ details }) {
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-bold text-primary">{area?.title}</h3>
-              <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full">
+              <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full">
                 {area.partnerCount} partners
               </span>
             </div>
@@ -3718,8 +3699,8 @@ function CommonDevelopmentAreaDetailContent({ details }) {
           </div>
           
           {area.cfMapping && (
-            <div className="p-3 bg-sw-blue/5 rounded-md border border-sw-blue/20">
-              <div className="text-sm font-medium text-sw-blue">Capability Framework</div>
+            <div className="p-3 sw-bg-blue/5 rounded-md border border-sw-blue/20">
+              <div className="text-sm font-medium sw-text-blue">Capability Framework</div>
               <div className="text-secondary mt-1">
                 <div>Principle {area.cfMapping.principleId}: {area.cfMapping.principleName}</div>
                 <div>Element {area.cfMapping.elementId}: {area.cfMapping.elementName}</div>
@@ -3730,16 +3711,16 @@ function CommonDevelopmentAreaDetailContent({ details }) {
         
         {/* Status breakdown */}
         <div className="grid grid-cols-3 gap-4 mt-5">
-          <div className="p-3 bg-sw-green/10 rounded-md text-center">
-            <p className="text-xl font-bold text-sw-green">{statusCounts.completed}</p>
+          <div className="p-3 sw-bg-green/10 rounded-md text-center">
+            <p className="text-xl font-bold sw-text-green">{statusCounts.completed}</p>
             <p className="text-sm text-secondary">Completed</p>
           </div>
-          <div className="p-3 bg-sw-blue/10 rounded-md text-center">
-            <p className="text-xl font-bold text-sw-blue">{statusCounts.inProgress}</p>
+          <div className="p-3 sw-bg-blue/10 rounded-md text-center">
+            <p className="text-xl font-bold sw-text-blue">{statusCounts.inProgress}</p>
             <p className="text-sm text-secondary">In Progress</p>
           </div>
-          <div className="p-3 bg-sw-red/10 rounded-md text-center">
-            <p className="text-xl font-bold text-sw-red">{statusCounts.notStarted}</p>
+          <div className="p-3 sw-bg-red/10 rounded-md text-center">
+            <p className="text-xl font-bold sw-text-red">{statusCounts.notStarted}</p>
             <p className="text-sm text-secondary">Not Started</p>
           </div>
         </div>
@@ -3761,7 +3742,7 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                   <div className="flex justify-between">
                     <p className="text-secondary">{action}</p>
                     <div>
-                      <span className="px-2 py-0.5 bg-sw-blue/10 text-sw-blue rounded text-sm">
+                      <span className="px-2 py-0.5 sw-bg-blue/10 sw-text-blue rounded text-sm">
                         {partnersWithAction.length} of {areaInstances.length} partners
                       </span>
                     </div>
@@ -3812,7 +3793,7 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                   <tr 
                     key={i} 
                     className={`cursor-pointer hover:bg-tertiary/5 ${
-                      selectedPartner === instance.partnerId ? 'bg-sw-blue/5' : ''
+                      selectedPartner === instance.partnerId ? 'sw-bg-blue/5' : ''
                     }`}
                     onClick={() => setSelectedPartner(
                       selectedPartner === instance.partnerId ? null : instance.partnerId
@@ -3823,9 +3804,9 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                     <td className="px-4 py-3 text-secondary">{instance.area.leadPerson || '—'}</td>
                     <td className="px-4 py-3">
                       <span className={`inline-block px-2 py-0.5 rounded-full text-white text-xs ${
-                        instance.area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                        instance.area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                        'bg-sw-red'
+                        instance.area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                        instance.area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                        'sw-bg-red'
                       }`}>
                         {instance.area.progressStatus || 'Not Started'}
                       </span>
@@ -3859,7 +3840,7 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                       {instance.partnerName}
                     </h4>
                     <button 
-                      className="text-sm text-sw-blue hover:underline"
+                      className="text-sm sw-text-blue hover:underline"
                       onClick={() => setSelectedPartner(null)}
                     >
                       Close
@@ -3893,9 +3874,9 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                         <div className="w-full bg-tertiary/20 h-2.5 rounded-full mr-2">
                           <div 
                             className={`h-full rounded-full ${
-                              instance.area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                              instance.area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                              'bg-sw-red'
+                              instance.area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                              instance.area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                              'sw-bg-red'
                             }`}
                             style={{ width: `${instance.area.completionPercentage || 0}%` }}
                           ></div>
@@ -3912,7 +3893,7 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                       <ul className="space-y-2">
                         {instance.area.actions.map((action, ai) => (
                           <li key={ai} className="flex items-start">
-                            <span className="text-sw-red mr-2">•</span>
+                            <span className="sw-text-red mr-2">•</span>
                             <span className="text-secondary">{action}</span>
                           </li>
                         ))}
@@ -3926,7 +3907,7 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                       <h5 className="font-medium text-secondary mb-2">GIP Excerpts</h5>
                       <div className="space-y-3">
                         {partnerExcerpts.map((excerpt, ei) => (
-                          <div key={ei} className="p-3 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                          <div key={ei} className="p-3 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
                             <p className="text-secondary italic">{excerpt.text}</p>
                             <div className="text-xs text-secondary mt-1">
                               From: {excerpt.section || 'Document'}
@@ -3963,15 +3944,15 @@ function CommonDevelopmentAreaDetailContent({ details }) {
                 <div className="flex items-center gap-2 mb-2">
                   <h5 className="font-medium text-primary">{instance.partnerName}</h5>
                   <span className={`px-2 py-0.5 rounded-full text-white text-xs ${
-                    instance.area.progressStatus === 'Completed' ? 'bg-sw-green' :
-                    instance.area.progressStatus === 'In Progress' ? 'bg-sw-blue' :
-                    'bg-sw-red'
+                    instance.area.progressStatus === 'Completed' ? 'sw-bg-green' :
+                    instance.area.progressStatus === 'In Progress' ? 'sw-bg-blue' :
+                    'sw-bg-red'
                   }`}>
                     {instance.area.progressStatus || 'Not Started'}
                   </span>
                 </div>
                 
-                <div className="p-3 bg-sw-yellow/10 rounded-md">
+                <div className="p-3 sw-text-yellow/10 rounded-md">
                   <p className="text-secondary italic">{excerpt.text}</p>
                 </div>
               </div>
@@ -4288,7 +4269,7 @@ function SupportTimelineDetailContent({ details }) {
     <div className="space-y-6">
       {/* Header with summary */}
       <div className="bg-white p-5 rounded-lg border-l-4 border-sw-blue shadow-sm">
-        <h3 className="text-xl font-bold text-sw-blue">Support Needs Timeline</h3>
+        <h3 className="text-xl font-bold sw-text-blue">Support Needs Timeline</h3>
         <p className="text-secondary mt-1">
           This timeline shows when support is needed across the year, allowing for better resource planning 
           and preparation.
@@ -4296,16 +4277,16 @@ function SupportTimelineDetailContent({ details }) {
         
         {/* Quick stats */}
         <div className="mt-4 grid grid-cols-3 gap-4">
-          <div className="bg-sw-blue/5 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-blue">{supportRequests.length}</p>
+          <div className="sw-bg-blue/5 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-blue">{supportRequests.length}</p>
             <p className="text-sm text-secondary">Total Support Requests</p>
           </div>
-          <div className="bg-sw-blue/5 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-blue">{sortedTypes.length}</p>
+          <div className="sw-bg-blue/5 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-blue">{sortedTypes.length}</p>
             <p className="text-sm text-secondary">Support Types</p>
           </div>
-          <div className="bg-sw-blue/5 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-blue">
+          <div className="sw-bg-blue/5 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-blue">
               {Object.values(requestsByQuarter).filter(q => q.requests.length > 0).length}
             </p>
             <p className="text-sm text-secondary">Active Quarters</p>
@@ -4406,7 +4387,7 @@ function SupportTimelineDetailContent({ details }) {
                 </span>
               </h5>
               <button 
-                className="text-sm text-sw-blue hover:underline"
+                className="text-sm sw-text-blue hover:underline"
                 onClick={() => setSelectedQuarter(null)}
               >
                 Close
@@ -4426,7 +4407,7 @@ function SupportTimelineDetailContent({ details }) {
                       <div>
                         <h6 className="font-medium text-primary">{request.supportArea}</h6>
                         {viewMode === 'comparison' && (
-                          <p className="text-sm text-sw-blue mt-1">{request.partnerName}</p>
+                          <p className="text-sm sw-text-blue mt-1">{request.partnerName}</p>
                         )}
                       </div>
                       <span className="px-3 py-1 bg-tertiary/10 text-secondary rounded-full text-sm">
@@ -4447,7 +4428,7 @@ function SupportTimelineDetailContent({ details }) {
                     
                     {/* GIP excerpt */}
                     {request.gipExcerpt && (
-                      <div className="mt-3 p-3 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                      <div className="mt-3 p-3 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
                         <p className="text-secondary italic text-sm">{request.gipExcerpt}</p>
                       </div>
                     )}
@@ -4466,7 +4447,7 @@ function SupportTimelineDetailContent({ details }) {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-sw-blue/5 border-b-2 border-sw-blue/20">
+              <tr className="sw-bg-blue/5 border-b-2 border-sw-blue/20">
                 <th className="py-3 px-4 text-left text-sm font-bold text-primary">Support Type</th>
                 {quarters.map(quarter => (
                   <th key={quarter.id} className="py-3 px-4 text-center text-sm font-bold text-primary">
@@ -4578,7 +4559,7 @@ function SupportQuarterDetailContent({ details }) {
     <div className="space-y-6">
       {/* Quarter header */}
       <div className="bg-white p-5 rounded-lg border-l-4 border-sw-blue shadow-sm">
-        <h3 className="text-xl font-bold text-sw-blue">
+        <h3 className="text-xl font-bold sw-text-blue">
           {quarter.name}
         </h3>
         <p className="text-secondary mt-1">
@@ -4587,17 +4568,17 @@ function SupportQuarterDetailContent({ details }) {
         
         {/* Quick stats */}
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="bg-sw-blue/5 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-blue">{quarter.requests.length}</p>
+          <div className="sw-bg-blue/5 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-blue">{quarter.requests.length}</p>
             <p className="text-sm text-secondary">Support Requests</p>
           </div>
-          <div className="bg-sw-blue/5 p-3 rounded-lg text-center">
-            <p className="text-xl font-bold text-sw-blue">{sortedTypes.length}</p>
+          <div className="sw-bg-blue/5 p-3 rounded-lg text-center">
+            <p className="text-xl font-bold sw-text-blue">{sortedTypes.length}</p>
             <p className="text-sm text-secondary">Support Types</p>
           </div>
           {viewMode === 'comparison' && (
-            <div className="bg-sw-blue/5 p-3 rounded-lg text-center">
-              <p className="text-xl font-bold text-sw-blue">{Object.keys(requestsByPartner).length}</p>
+            <div className="sw-bg-blue/5 p-3 rounded-lg text-center">
+              <p className="text-xl font-bold sw-text-blue">{Object.keys(requestsByPartner).length}</p>
               <p className="text-sm text-secondary">Partners</p>
             </div>
           )}
@@ -4637,7 +4618,7 @@ function SupportQuarterDetailContent({ details }) {
                 key={type} 
                 className={`
                   border rounded-lg p-4 transition-all duration-200
-                  ${matchesFilter ? 'border-sw-blue/30 bg-sw-blue/5' : 'border-tertiary/20'}
+                  ${matchesFilter ? 'border-sw-blue/30 sw-bg-blue/5' : 'border-tertiary/20'}
                   ${!matchesFilter ? 'opacity-60' : 'opacity-100'}
                   cursor-pointer
                 `}
@@ -4647,7 +4628,7 @@ function SupportQuarterDetailContent({ details }) {
                   <h5 className="font-medium text-primary">{type}</h5>
                   <span className={`
                     px-3 py-1 rounded-full text-white text-sm
-                    ${matchesFilter ? 'bg-sw-blue' : 'bg-tertiary'}
+                    ${matchesFilter ? 'sw-bg-blue' : 'bg-tertiary'}
                   `}>
                     {typeRequests.length}
                   </span>
@@ -4680,7 +4661,7 @@ function SupportQuarterDetailContent({ details }) {
           
           {selectedType !== 'all' && (
             <button 
-              className="text-sm text-sw-blue hover:underline"
+              className="text-sm sw-text-blue hover:underline"
               onClick={() => setSelectedType('all')}
             >
               Clear Filter
@@ -4697,14 +4678,14 @@ function SupportQuarterDetailContent({ details }) {
             {filteredRequests.map((request, i) => (
               <div key={i} className="border border-tertiary/20 rounded-lg overflow-hidden">
                 {/* Request header */}
-                <div className="bg-sw-blue/5 p-3 border-b border-tertiary/20 flex justify-between items-center">
+                <div className="sw-bg-blue/5 p-3 border-b border-tertiary/20 flex justify-between items-center">
                   <div>
-                    <h5 className="font-semibold text-sw-blue">{request.supportArea}</h5>
+                    <h5 className="font-semibold sw-text-blue">{request.supportArea}</h5>
                     {viewMode === 'comparison' && (
                       <p className="text-sm text-secondary">{request.partnerName}</p>
                     )}
                   </div>
-                  <span className="px-3 py-1 bg-sw-blue text-white rounded-full text-sm">
+                  <span className="px-3 py-1 sw-bg-blue text-white rounded-full text-sm">
                     {formatDate(request.requestedTimeline)}
                   </span>
                 </div>
@@ -4713,7 +4694,7 @@ function SupportQuarterDetailContent({ details }) {
                 <div className="p-4">
                   {/* GIP excerpt - highlighted prominently */}
                   {request.gipExcerpt && (
-                    <div className="mb-4 p-3 bg-sw-yellow/10 rounded-md border-l-4 border-sw-yellow">
+                    <div className="mb-4 p-3 sw-text-yellow/10 rounded-md border-l-4 border-sw-yellow">
                       <p className="text-secondary italic">{request.gipExcerpt}</p>
                     </div>
                   )}
@@ -4754,7 +4735,7 @@ function SupportQuarterDetailContent({ details }) {
                 <div key={index} className="border border-tertiary/20 rounded-lg p-4">
                   <div className="flex justify-between items-center">
                     <h5 className="font-medium text-primary">{partnerName}</h5>
-                    <span className="px-3 py-1 bg-sw-blue/10 text-sw-blue rounded-full text-sm">
+                    <span className="px-3 py-1 sw-bg-blue/10 sw-text-blue rounded-full text-sm">
                       {requests.length} request{requests.length !== 1 ? 's' : ''}
                     </span>
                   </div>
