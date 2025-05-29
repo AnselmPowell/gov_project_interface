@@ -10,7 +10,7 @@ The primary objective of this review is to extract key insights from the GIPs. T
 
 ## 1. Problem Statement
 
-The Sport Wales Governance Team is responsible for reviewing Governance Improvement Plans (GIPs) submitted annually by approximately 70 partner organizations (e.g., National Governing Bodies - NGBs). Manually analyzing these reports to extract insights, compare them against the Sport Wales Capability Framework (CF), and identify trends is a highly time-consuming and resource-intensive process. This manual effort limits the team's capacity to focus on strategic development and support activities based on the insights gathered.
+The Sport Wales Governance Team is responsible for reviewing Governance Improvement Plans (GIPs) submitted annually by approximately 70 partner organizations (e.g., National Governing Bodies - NGBs). Manually analysing these reports to extract insights, compare them against the Sport Wales Capability Framework (CF), and identify trends is a highly time-consuming and resource-intensive process. This manual effort limits the team's capacity to focus on strategic development and support activities based on the insights gathered.
 
 ## 2. Project Goal
 
